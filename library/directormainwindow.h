@@ -3,12 +3,11 @@
 
 //#include "helloscreen.h"
 #include "qdatetime.h"
-#include "qregularexpression.h"
+#include "qthread.h"
 #include <QWidget>
 #include <QPainter>
 #include <QFile>
-
-
+#include <iostream>
 
 namespace Ui {
 class DirectorMainWindow;
@@ -41,9 +40,12 @@ private slots:
 
     void on_toolButton_3_clicked();
 
+    void GuiUpdateCallback(uint8_t const *arrptr, size_t);
+
 private:
     Ui::DirectorMainWindow *ui;
     //HelloScreen w;
+    QThread *thread;
 
 
 signals:

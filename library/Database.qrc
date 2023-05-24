@@ -1,0 +1,16 @@
+<RCC>
+    <qresource prefix="/">
+        <file>resourses/DataBase/login/login.txt</file>
+        <file>resourses/DataBase/user/1/empList.txt</file>
+        <file>resourses/DataBase/user/1/info.txt</file>
+        <file>resourses/DataBase/user/1/userList.txt</file>
+        <file>resourses/DataBase/user/2/info.txt</file>
+        <file>resourses/DataBase/user/3/bookfornow.txt</file>
+        <file>resourses/DataBase/user/3/history.txt</file>
+        <file>resourses/DataBase/user/3/info.txt</file>
+        <file>resourses/DataBase/user/4/bookfornow.txt</file>
+        <file>resourses/DataBase/user/4/history.txt</file>
+        <file>resourses/DataBase/user/4/info.txt</file>
+        <file>resourses/DataBase/shared/books.txt</file>
+    </qresource>
+</RCC>

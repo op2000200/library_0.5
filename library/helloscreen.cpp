@@ -9,8 +9,8 @@
 
 
 
-QString Curpath1 = "C:\\sample\\login\\login"+ QDate::currentDate().toString().replace(QRegularExpression("[ ]"), "_")+"_"+QTime::currentTime().toString().replace(QRegularExpression("[:]"), "_")+".txt";
-QFile file2("C:\\sample\\login\\login.txt");
+QString Curpath1 = "C:\\Git\\Library05\\library_0.5\\library\\resourses\\DataBase\\login\\login"+ QDate::currentDate().toString().replace(QRegularExpression("[ ]"), "_")+"_"+QTime::currentTime().toString().replace(QRegularExpression("[:]"), "_")+".txt";
+QFile file2("C:\\Git\\Library05\\library_0.5\\library\\resourses\\DataBase\\login\\login.txt");
 QFile file3(Curpath1);
 //bool flag = 0;
 //QStringList abc;

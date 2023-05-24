@@ -11,13 +11,15 @@
 #include <QThread>
 #include <iostream>
 #include <QFile>
+#include "mythread.h"
 //#include <main.h>
 //#include
 //#include <main.cpp>
 
 
-QString Curpath = "C:\\sample\\books"+ QDate::currentDate().toString().replace(QRegularExpression("[ ]"), "_")+"_"+QTime::currentTime().toString().replace(QRegularExpression("[:]"), "_")+".txt";
-QFile file("C:\\sample\\books.txt");
+QString Curpath = "C:\\Git\\Library05\\library_0.5\\library\\resourses\\DataBase\\shared\\books"+ QDate::currentDate().toString().replace(QRegularExpression("[ ]"), "_")+"_"+QTime::currentTime().toString().replace(QRegularExpression("[:]"), "_")+".txt";
+QFile file("C:\\Git\\Library05\\library_0.5\\library\\resourses\\DataBase\\shared\\books.txt");
+
 QFile file1(Curpath);
 int userID1;
 //bool flag = 0;
@@ -66,6 +68,10 @@ DirectorMainWindow::DirectorMainWindow(QWidget *parent) :
     file1.flush();
 
 
+    MyThread thread1("A");
+
+    thread1.start();
+
 
 
 
@@ -75,7 +81,15 @@ DirectorMainWindow::DirectorMainWindow(QWidget *parent) :
          //view->show();
     //connect(this, &DirectorMainWindow::signal, w, &HelloScreen::slot);
 
+
+    /*
+    QThread* thread = new QThread;
+    clockss* cs = new clockss;
+    cs->moveToThread(thread);
+    cs->time(ui);
+    //thread->start();
     //refreshtime();
+*/
 }
 
 DirectorMainWindow::~DirectorMainWindow()

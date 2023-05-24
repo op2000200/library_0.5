@@ -36,4 +36,5 @@ DISTFILES += \
     resourses/вход.jpg
 
 RESOURCES += \
-    BGimages.qrc
+    BGimages.qrc \
+    Database.qrc
