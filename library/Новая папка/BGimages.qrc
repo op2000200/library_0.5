@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>resourses/vxod.jpg</file>
+        <file>resourses/png-clipart-square-squares-miscellaneous-angle-thumbnail.png</file>
+    </qresource>
+</RCC>
