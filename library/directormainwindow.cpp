@@ -11,7 +11,7 @@
 #include <QThread>
 #include <iostream>
 #include <QFile>
-#include "mythread.h"
+#include <QDateTime>
 //#include <main.h>
 //#include
 //#include <main.cpp>
@@ -22,6 +22,7 @@ QFile file("C:\\Git\\Library05\\library_0.5\\library\\resourses\\DataBase\\share
 
 QFile file1(Curpath);
 int userID1;
+QDateTime d_m_w_launchDate = QDateTime::currentDateTime();
 //bool flag = 0;
 //QStringList abc;
 
@@ -68,9 +69,6 @@ DirectorMainWindow::DirectorMainWindow(QWidget *parent) :
     file1.flush();
 
 
-    MyThread thread1("A");
-
-    thread1.start();
 
 
 
@@ -229,5 +227,10 @@ void DirectorMainWindow::on_toolButton_3_clicked()
     emit exiting();
     this->destroy();
 
+}
+
+void DirectorMainWindow::collectRegularUsers()
+{
+    ;
 }
 

@@ -25,6 +25,8 @@ public:
     void refreshtime();
     QPixmap GetNew(QImage& img);
     void refresh(QFile& f);
+    void collectRegularUsers();
+    void collectEmp();
 
 private slots:
     void on_toolButton_clicked();
