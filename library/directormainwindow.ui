@@ -59,8 +59,19 @@ border-radius: 20px;</string>
      <height>400</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <pointsize>200</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-radius: 200px;</string>
+   </property>
    <property name="text">
     <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
    </property>
   </widget>
   <widget class="QLabel" name="label_2">

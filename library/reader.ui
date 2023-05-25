@@ -385,9 +385,9 @@ border-radius: 20px;</string>
    <property name="geometry">
     <rect>
      <x>1829</x>
-     <y>381</y>
-     <width>21</width>
-     <height>661</height>
+     <y>151</y>
+     <width>20</width>
+     <height>891</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -490,30 +490,29 @@ border-radius: 30px;</string>
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_12">
+  <widget class="QLabel" name="DATA">
    <property name="geometry">
     <rect>
-     <x>80</x>
-     <y>840</y>
-     <width>49</width>
-     <height>16</height>
+     <x>50</x>
+     <y>580</y>
+     <width>321</width>
+     <height>101</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>48</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(217, 217, 217);
+color: rgb(51, 51, 51);</string>
    </property>
    <property name="text">
     <string>дата</string>
    </property>
-  </widget>
-  <widget class="QLabel" name="label_13">
-   <property name="geometry">
-    <rect>
-     <x>70</x>
-     <y>960</y>
-     <width>49</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>время</string>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
    </property>
   </widget>
   <widget class="QLabel" name="label_3">
@@ -611,7 +610,7 @@ color: rgb(51,51,51);</string>
     <rect>
      <x>490</x>
      <y>120</y>
-     <width>1375</width>
+     <width>1401</width>
      <height>931</height>
     </rect>
    </property>
@@ -656,8 +655,7 @@ border-radius: 20px;</string>
   <zorder>label_11</zorder>
   <zorder>label_5</zorder>
   <zorder>label_8</zorder>
-  <zorder>label_12</zorder>
-  <zorder>label_13</zorder>
+  <zorder>DATA</zorder>
   <zorder>toolButton_3</zorder>
  </widget>
  <resources/>

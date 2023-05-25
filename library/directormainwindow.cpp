@@ -31,9 +31,13 @@ DirectorMainWindow::DirectorMainWindow(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::DirectorMainWindow)
 {
+
     ui->setupUi(this);
     //QImage nnn("C:\\library\\resourses\\avaholder.png");
     //ui->label->setPixmap(GetNew((nnn)));
+    srand(time(0));
+    QString aa = "border-radius: 200px; background-color: rgb(" + QString::number(rand()%255) + "," + QString::number(rand()%255) + "," + QString::number(rand()%255) + ");";
+    ui->label->setStyleSheet(aa);
     ui->DATA->setText(QString::number( QDate::currentDate().day()));
 
     ui->tableWidget->setHidden(1);
@@ -178,8 +182,6 @@ void DirectorMainWindow::on_pushButton_clicked()
 {
     if (ui->tableWidget_2->isHidden())
         ui->tableWidget_2->show();
-    else
-        ui->tableWidget_2->hide();
 }
 
 
@@ -187,8 +189,6 @@ void DirectorMainWindow::on_pushButton_2_clicked()
 {
     if (ui->tableWidget_3->isHidden())
         ui->tableWidget_3->show();
-    else
-        ui->tableWidget_3->hide();
 }
 
 
@@ -196,8 +196,6 @@ void DirectorMainWindow::on_pushButton_3_clicked()
 {
     if (ui->tableWidget->isHidden())
         ui->tableWidget->show();
-    else
-        ui->tableWidget->hide();
     //ui->textBrowser->clear();
     file1.seek(0);
 
@@ -213,11 +211,12 @@ void DirectorMainWindow::readData(int ID)
 {
     ui->TIME->setText(QString::number(ID));
     userID1 = ID;
-    QString inf = "C:\\sample\\user\\" + QString::number(userID1) + "\\info.txt";
+    QString inf = "C:\\Git\\Library05\\library_0.5\\library\\resourses\\DataBase\\user\\" + QString::number(userID1) + "\\info.txt";
     QFile info(inf);
     info.open(QIODevice::ReadOnly);
     inf = info.readLine();
     ui->label_14->setText(inf);
+    info.close();
 }
 
 

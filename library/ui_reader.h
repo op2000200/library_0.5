@@ -68,8 +68,7 @@ public:
     QLabel *label_11;
     QToolButton *toolButton;
     QLabel *label_6;
-    QLabel *label_12;
-    QLabel *label_13;
+    QLabel *DATA;
     QLabel *label_3;
     QLabel *label;
     QLabel *label_15;
@@ -267,7 +266,7 @@ public:
 "border-radius: 20px;"));
         label_10 = new QLabel(reader);
         label_10->setObjectName("label_10");
-        label_10->setGeometry(QRect(1829, 381, 21, 661));
+        label_10->setGeometry(QRect(1829, 151, 20, 891));
         label_10->setStyleSheet(QString::fromUtf8("background-color: rgb(172, 172, 172);"));
         label_8 = new QLabel(reader);
         label_8->setObjectName("label_8");
@@ -298,12 +297,15 @@ public:
         label_6->setGeometry(QRect(480, 110, 1421, 951));
         label_6->setStyleSheet(QString::fromUtf8("background-color: rgb(217, 217, 217);\n"
 "border-radius: 30px;"));
-        label_12 = new QLabel(reader);
-        label_12->setObjectName("label_12");
-        label_12->setGeometry(QRect(80, 840, 49, 16));
-        label_13 = new QLabel(reader);
-        label_13->setObjectName("label_13");
-        label_13->setGeometry(QRect(70, 960, 49, 16));
+        DATA = new QLabel(reader);
+        DATA->setObjectName("DATA");
+        DATA->setGeometry(QRect(50, 580, 321, 101));
+        QFont font1;
+        font1.setPointSize(48);
+        DATA->setFont(font1);
+        DATA->setStyleSheet(QString::fromUtf8("background-color: rgb(217, 217, 217);\n"
+"color: rgb(51, 51, 51);"));
+        DATA->setAlignment(Qt::AlignCenter);
         label_3 = new QLabel(reader);
         label_3->setObjectName("label_3");
         label_3->setGeometry(QRect(30, 21, 411, 80));
@@ -332,7 +334,7 @@ public:
         label_14->setAlignment(Qt::AlignCenter);
         label_9 = new QLabel(reader);
         label_9->setObjectName("label_9");
-        label_9->setGeometry(QRect(490, 120, 1375, 931));
+        label_9->setGeometry(QRect(490, 120, 1401, 931));
         label_9->setStyleSheet(QString::fromUtf8("background-color: rgb(172, 172, 172);\n"
 "border-radius: 30px;"));
         toolButton_3 = new QToolButton(reader);
@@ -356,13 +358,12 @@ public:
         label_11->raise();
         label_5->raise();
         label_8->raise();
-        label_12->raise();
-        label_13->raise();
+        DATA->raise();
         toolButton_3->raise();
 
         retranslateUi(reader);
 
-        tabWidget->setCurrentIndex(1);
+        tabWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(reader);
@@ -406,8 +407,7 @@ public:
         label_11->setText(QString());
         toolButton->setText(QString());
         label_6->setText(QString());
-        label_12->setText(QCoreApplication::translate("reader", "\320\264\320\260\321\202\320\260", nullptr));
-        label_13->setText(QCoreApplication::translate("reader", "\320\262\321\200\320\265\320\274\321\217", nullptr));
+        DATA->setText(QCoreApplication::translate("reader", "\320\264\320\260\321\202\320\260", nullptr));
         label_3->setText(QString());
         label->setText(QString());
         label_15->setText(QString());

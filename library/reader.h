@@ -2,6 +2,7 @@
 #define READER_H
 
 #include <QWidget>
+#include <QFile>
 
 namespace Ui {
 class reader;
@@ -22,12 +23,16 @@ private slots:
 
     void on_toolButton_3_clicked();
 
+    void on_pushButton_3_clicked();
+
 private:
     Ui::reader *ui;
 
 public:
 
     QPixmap GetNew(QImage& img);
+    void refresh(QFile &f);
+
 
 public slots:
     void readData(int ID);

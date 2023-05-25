@@ -113,6 +113,11 @@ public:
         label = new QLabel(DirectorMainWindow);
         label->setObjectName("label");
         label->setGeometry(QRect(45, 110, 400, 400));
+        QFont font;
+        font.setPointSize(200);
+        label->setFont(font);
+        label->setStyleSheet(QString::fromUtf8("border-radius: 200px;"));
+        label->setAlignment(Qt::AlignCenter);
         label_2 = new QLabel(DirectorMainWindow);
         label_2->setObjectName("label_2");
         label_2->setGeometry(QRect(20, 10, 451, 1051));
@@ -126,9 +131,9 @@ public:
         label_4 = new QLabel(DirectorMainWindow);
         label_4->setObjectName("label_4");
         label_4->setGeometry(QRect(50, 30, 390, 60));
-        QFont font;
-        font.setPointSize(36);
-        label_4->setFont(font);
+        QFont font1;
+        font1.setPointSize(36);
+        label_4->setFont(font1);
         label_4->setStyleSheet(QString::fromUtf8("background: #C4C1C1;\n"
 "border-radius: 30px;\n"
 "color: rgb(51,51,51);"));
@@ -416,7 +421,7 @@ public:
         label_14 = new QLabel(DirectorMainWindow);
         label_14->setObjectName("label_14");
         label_14->setGeometry(QRect(500, 30, 1291, 60));
-        label_14->setFont(font);
+        label_14->setFont(font1);
         label_14->setStyleSheet(QString::fromUtf8("background: #C4C1C1;\n"
 "border-radius: 30px;\n"
 "color: rgb(51,51,51);"));

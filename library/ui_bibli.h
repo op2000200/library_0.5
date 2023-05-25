@@ -66,8 +66,12 @@ public:
         label_14 = new QLabel(bibli);
         label_14->setObjectName("label_14");
         label_14->setGeometry(QRect(490, 30, 1291, 60));
+        QFont font;
+        font.setPointSize(36);
+        label_14->setFont(font);
         label_14->setStyleSheet(QString::fromUtf8("background: #C4C1C1;\n"
 "border-radius: 30px;"));
+        label_14->setAlignment(Qt::AlignCenter);
         label_10 = new QLabel(bibli);
         label_10->setObjectName("label_10");
         label_10->setGeometry(QRect(1829, 570, 21, 471));
@@ -86,8 +90,6 @@ public:
         label_4 = new QLabel(bibli);
         label_4->setObjectName("label_4");
         label_4->setGeometry(QRect(40, 30, 390, 60));
-        QFont font;
-        font.setPointSize(36);
         label_4->setFont(font);
         label_4->setStyleSheet(QString::fromUtf8("background: #C4C1C1;\n"
 "border-radius: 30px;\n"
