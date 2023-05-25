@@ -42,7 +42,6 @@ private slots:
 
     void on_toolButton_3_clicked();
 
-    void GuiUpdateCallback(uint8_t const *arrptr, size_t);
 
 private:
     Ui::DirectorMainWindow *ui;

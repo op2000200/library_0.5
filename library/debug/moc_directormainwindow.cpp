@@ -26,7 +26,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 namespace {
 struct qt_meta_stringdata_DirectorMainWindow_t {
-    uint offsetsAndSizes[30];
+    uint offsetsAndSizes[22];
     char stringdata0[19];
     char stringdata1[8];
     char stringdata2[1];
@@ -36,12 +36,8 @@ struct qt_meta_stringdata_DirectorMainWindow_t {
     char stringdata6[24];
     char stringdata7[24];
     char stringdata8[24];
-    char stringdata9[18];
-    char stringdata10[15];
-    char stringdata11[7];
-    char stringdata12[7];
-    char stringdata13[9];
-    char stringdata14[3];
+    char stringdata9[9];
+    char stringdata10[3];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_DirectorMainWindow_t::offsetsAndSizes) + ofs), len 
@@ -56,12 +52,8 @@ Q_CONSTINIT static const qt_meta_stringdata_DirectorMainWindow_t qt_meta_stringd
         QT_MOC_LITERAL(96, 23),  // "on_pushButton_2_clicked"
         QT_MOC_LITERAL(120, 23),  // "on_pushButton_3_clicked"
         QT_MOC_LITERAL(144, 23),  // "on_toolButton_3_clicked"
-        QT_MOC_LITERAL(168, 17),  // "GuiUpdateCallback"
-        QT_MOC_LITERAL(186, 14),  // "const uint8_t*"
-        QT_MOC_LITERAL(201, 6),  // "arrptr"
-        QT_MOC_LITERAL(208, 6),  // "size_t"
-        QT_MOC_LITERAL(215, 8),  // "readData"
-        QT_MOC_LITERAL(224, 2)   // "ID"
+        QT_MOC_LITERAL(168, 8),  // "readData"
+        QT_MOC_LITERAL(177, 2)   // "ID"
     },
     "DirectorMainWindow",
     "exiting",
@@ -72,10 +64,6 @@ Q_CONSTINIT static const qt_meta_stringdata_DirectorMainWindow_t qt_meta_stringd
     "on_pushButton_2_clicked",
     "on_pushButton_3_clicked",
     "on_toolButton_3_clicked",
-    "GuiUpdateCallback",
-    "const uint8_t*",
-    "arrptr",
-    "size_t",
     "readData",
     "ID"
 };
@@ -88,7 +76,7 @@ Q_CONSTINIT static const uint qt_meta_data_DirectorMainWindow[] = {
       10,       // revision
        0,       // classname
        0,    0, // classinfo
-       9,   14, // methods
+       8,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -96,17 +84,16 @@ Q_CONSTINIT static const uint qt_meta_data_DirectorMainWindow[] = {
        1,       // signalCount
 
  // signals: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,   68,    2, 0x06,    1 /* Public */,
+       1,    0,   62,    2, 0x06,    1 /* Public */,
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       3,    0,   69,    2, 0x08,    2 /* Private */,
-       4,    0,   70,    2, 0x08,    3 /* Private */,
-       5,    0,   71,    2, 0x08,    4 /* Private */,
-       6,    0,   72,    2, 0x08,    5 /* Private */,
-       7,    0,   73,    2, 0x08,    6 /* Private */,
-       8,    0,   74,    2, 0x08,    7 /* Private */,
-       9,    2,   75,    2, 0x08,    8 /* Private */,
-      13,    1,   80,    2, 0x0a,   11 /* Public */,
+       3,    0,   63,    2, 0x08,    2 /* Private */,
+       4,    0,   64,    2, 0x08,    3 /* Private */,
+       5,    0,   65,    2, 0x08,    4 /* Private */,
+       6,    0,   66,    2, 0x08,    5 /* Private */,
+       7,    0,   67,    2, 0x08,    6 /* Private */,
+       8,    0,   68,    2, 0x08,    7 /* Private */,
+       9,    1,   69,    2, 0x0a,    8 /* Public */,
 
  // signals: parameters
     QMetaType::Void,
@@ -118,8 +105,7 @@ Q_CONSTINIT static const uint qt_meta_data_DirectorMainWindow[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void, 0x80000000 | 10, 0x80000000 | 12,   11,    2,
-    QMetaType::Void, QMetaType::Int,   14,
+    QMetaType::Void, QMetaType::Int,   10,
 
        0        // eod
 };
@@ -147,10 +133,6 @@ Q_CONSTINIT const QMetaObject DirectorMainWindow::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_toolButton_3_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        // method 'GuiUpdateCallback'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<uint8_t const *, std::false_type>,
-        QtPrivate::TypeAndForceComplete<size_t, std::false_type>,
         // method 'readData'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<int, std::false_type>
@@ -171,8 +153,7 @@ void DirectorMainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, i
         case 4: _t->on_pushButton_2_clicked(); break;
         case 5: _t->on_pushButton_3_clicked(); break;
         case 6: _t->on_toolButton_3_clicked(); break;
-        case 7: _t->GuiUpdateCallback((*reinterpret_cast< std::add_pointer_t<const uint8_t*>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<size_t>>(_a[2]))); break;
-        case 8: _t->readData((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 7: _t->readData((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -206,13 +187,13 @@ int DirectorMainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 9)
+        if (_id < 8)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 9;
+        _id -= 8;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 9)
+        if (_id < 8)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 9;
+        _id -= 8;
     }
     return _id;
 }

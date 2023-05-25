@@ -11,8 +11,11 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QFrame>
+#include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
+#include <QtWidgets/QPushButton>
 #include <QtWidgets/QTabWidget>
 #include <QtWidgets/QTableWidget>
 #include <QtWidgets/QToolButton>
@@ -27,8 +30,36 @@ public:
     QLabel *label_2;
     QTabWidget *tabWidget;
     QWidget *tab;
-    QTableWidget *tableWidget;
+    QFrame *frame;
+    QWidget *horizontalLayoutWidget_2;
+    QHBoxLayout *horizontalLayout_2;
+    QPushButton *pushButton_3;
+    QLabel *label_25;
+    QLabel *label_26;
+    QLabel *label_27;
+    QLabel *label_28;
+    QLabel *label_29;
+    QLabel *label_30;
+    QLabel *label_31;
+    QLabel *label_32;
+    QLabel *label_33;
+    QFrame *frame_2;
+    QTableWidget *tableWidget_4;
     QWidget *tab_2;
+    QFrame *frame_3;
+    QWidget *horizontalLayoutWidget_3;
+    QHBoxLayout *horizontalLayout_3;
+    QPushButton *pushButton;
+    QLabel *label_34;
+    QLabel *label_35;
+    QLabel *label_36;
+    QLabel *label_37;
+    QLabel *label_38;
+    QLabel *label_39;
+    QLabel *label_40;
+    QLabel *label_41;
+    QLabel *label_42;
+    QFrame *frame_4;
     QTableWidget *tableWidget_2;
     QToolButton *toolButton_2;
     QLabel *label_10;
@@ -79,23 +110,155 @@ public:
         tab = new QWidget();
         tab->setObjectName("tab");
         tab->setStyleSheet(QString::fromUtf8(""));
-        tableWidget = new QTableWidget(tab);
-        tableWidget->setObjectName("tableWidget");
-        tableWidget->setGeometry(QRect(10, 10, 1271, 831));
-        tableWidget->setStyleSheet(QString::fromUtf8("selection-background-color:  rgb(80,80,80);\n"
-"border-radius: 10px;\n"
-""));
-        tableWidget->setFrameShape(QFrame::NoFrame);
+        frame = new QFrame(tab);
+        frame->setObjectName("frame");
+        frame->setGeometry(QRect(0, 0, 1281, 81));
+        frame->setFrameShape(QFrame::StyledPanel);
+        frame->setFrameShadow(QFrame::Raised);
+        horizontalLayoutWidget_2 = new QWidget(frame);
+        horizontalLayoutWidget_2->setObjectName("horizontalLayoutWidget_2");
+        horizontalLayoutWidget_2->setGeometry(QRect(10, 10, 1261, 61));
+        horizontalLayout_2 = new QHBoxLayout(horizontalLayoutWidget_2);
+        horizontalLayout_2->setObjectName("horizontalLayout_2");
+        horizontalLayout_2->setContentsMargins(0, 0, 0, 0);
+        pushButton_3 = new QPushButton(horizontalLayoutWidget_2);
+        pushButton_3->setObjectName("pushButton_3");
+        pushButton_3->setStyleSheet(QString::fromUtf8("background-color: rgb(91, 102, 96);\n"
+"border-radius: 10px;"));
+
+        horizontalLayout_2->addWidget(pushButton_3);
+
+        label_25 = new QLabel(horizontalLayoutWidget_2);
+        label_25->setObjectName("label_25");
+
+        horizontalLayout_2->addWidget(label_25);
+
+        label_26 = new QLabel(horizontalLayoutWidget_2);
+        label_26->setObjectName("label_26");
+
+        horizontalLayout_2->addWidget(label_26);
+
+        label_27 = new QLabel(horizontalLayoutWidget_2);
+        label_27->setObjectName("label_27");
+
+        horizontalLayout_2->addWidget(label_27);
+
+        label_28 = new QLabel(horizontalLayoutWidget_2);
+        label_28->setObjectName("label_28");
+
+        horizontalLayout_2->addWidget(label_28);
+
+        label_29 = new QLabel(horizontalLayoutWidget_2);
+        label_29->setObjectName("label_29");
+
+        horizontalLayout_2->addWidget(label_29);
+
+        label_30 = new QLabel(horizontalLayoutWidget_2);
+        label_30->setObjectName("label_30");
+
+        horizontalLayout_2->addWidget(label_30);
+
+        label_31 = new QLabel(horizontalLayoutWidget_2);
+        label_31->setObjectName("label_31");
+
+        horizontalLayout_2->addWidget(label_31);
+
+        label_32 = new QLabel(horizontalLayoutWidget_2);
+        label_32->setObjectName("label_32");
+
+        horizontalLayout_2->addWidget(label_32);
+
+        label_33 = new QLabel(horizontalLayoutWidget_2);
+        label_33->setObjectName("label_33");
+
+        horizontalLayout_2->addWidget(label_33);
+
+        frame_2 = new QFrame(tab);
+        frame_2->setObjectName("frame_2");
+        frame_2->setGeometry(QRect(0, 90, 1281, 751));
+        frame_2->setFrameShape(QFrame::StyledPanel);
+        frame_2->setFrameShadow(QFrame::Raised);
+        tableWidget_4 = new QTableWidget(frame_2);
+        tableWidget_4->setObjectName("tableWidget_4");
+        tableWidget_4->setGeometry(QRect(10, 10, 1261, 731));
+        tableWidget_4->setFrameShape(QFrame::NoFrame);
+        tableWidget_4->setCornerButtonEnabled(false);
         tabWidget->addTab(tab, QString());
         tab_2 = new QWidget();
         tab_2->setObjectName("tab_2");
-        tableWidget_2 = new QTableWidget(tab_2);
+        frame_3 = new QFrame(tab_2);
+        frame_3->setObjectName("frame_3");
+        frame_3->setGeometry(QRect(0, 0, 1281, 81));
+        frame_3->setFrameShape(QFrame::StyledPanel);
+        frame_3->setFrameShadow(QFrame::Raised);
+        horizontalLayoutWidget_3 = new QWidget(frame_3);
+        horizontalLayoutWidget_3->setObjectName("horizontalLayoutWidget_3");
+        horizontalLayoutWidget_3->setGeometry(QRect(10, 10, 1261, 61));
+        horizontalLayout_3 = new QHBoxLayout(horizontalLayoutWidget_3);
+        horizontalLayout_3->setObjectName("horizontalLayout_3");
+        horizontalLayout_3->setContentsMargins(0, 0, 0, 0);
+        pushButton = new QPushButton(horizontalLayoutWidget_3);
+        pushButton->setObjectName("pushButton");
+        pushButton->setStyleSheet(QString::fromUtf8("background-color: rgb(91, 102, 96);\n"
+"border-radius: 10px;"));
+
+        horizontalLayout_3->addWidget(pushButton);
+
+        label_34 = new QLabel(horizontalLayoutWidget_3);
+        label_34->setObjectName("label_34");
+
+        horizontalLayout_3->addWidget(label_34);
+
+        label_35 = new QLabel(horizontalLayoutWidget_3);
+        label_35->setObjectName("label_35");
+
+        horizontalLayout_3->addWidget(label_35);
+
+        label_36 = new QLabel(horizontalLayoutWidget_3);
+        label_36->setObjectName("label_36");
+
+        horizontalLayout_3->addWidget(label_36);
+
+        label_37 = new QLabel(horizontalLayoutWidget_3);
+        label_37->setObjectName("label_37");
+
+        horizontalLayout_3->addWidget(label_37);
+
+        label_38 = new QLabel(horizontalLayoutWidget_3);
+        label_38->setObjectName("label_38");
+
+        horizontalLayout_3->addWidget(label_38);
+
+        label_39 = new QLabel(horizontalLayoutWidget_3);
+        label_39->setObjectName("label_39");
+
+        horizontalLayout_3->addWidget(label_39);
+
+        label_40 = new QLabel(horizontalLayoutWidget_3);
+        label_40->setObjectName("label_40");
+
+        horizontalLayout_3->addWidget(label_40);
+
+        label_41 = new QLabel(horizontalLayoutWidget_3);
+        label_41->setObjectName("label_41");
+
+        horizontalLayout_3->addWidget(label_41);
+
+        label_42 = new QLabel(horizontalLayoutWidget_3);
+        label_42->setObjectName("label_42");
+
+        horizontalLayout_3->addWidget(label_42);
+
+        frame_4 = new QFrame(tab_2);
+        frame_4->setObjectName("frame_4");
+        frame_4->setGeometry(QRect(0, 90, 1281, 751));
+        frame_4->setFrameShape(QFrame::StyledPanel);
+        frame_4->setFrameShadow(QFrame::Raised);
+        tableWidget_2 = new QTableWidget(frame_4);
         tableWidget_2->setObjectName("tableWidget_2");
-        tableWidget_2->setGeometry(QRect(10, 10, 1271, 831));
-        tableWidget_2->setStyleSheet(QString::fromUtf8("selection-background-color:  rgb(80,80,80);\n"
-"border-radius: 10px;\n"
-""));
+        tableWidget_2->setGeometry(QRect(10, 10, 1261, 731));
         tableWidget_2->setFrameShape(QFrame::NoFrame);
+        tableWidget_2->setCornerButtonEnabled(false);
         tabWidget->addTab(tab_2, QString());
         toolButton_2 = new QToolButton(reader);
         toolButton_2->setObjectName("toolButton_2");
@@ -137,10 +300,10 @@ public:
 "border-radius: 30px;"));
         label_12 = new QLabel(reader);
         label_12->setObjectName("label_12");
-        label_12->setGeometry(QRect(100, 781, 49, 16));
+        label_12->setGeometry(QRect(80, 840, 49, 16));
         label_13 = new QLabel(reader);
         label_13->setObjectName("label_13");
-        label_13->setGeometry(QRect(90, 891, 49, 16));
+        label_13->setGeometry(QRect(70, 960, 49, 16));
         label_3 = new QLabel(reader);
         label_3->setObjectName("label_3");
         label_3->setGeometry(QRect(30, 21, 411, 80));
@@ -199,7 +362,7 @@ public:
 
         retranslateUi(reader);
 
-        tabWidget->setCurrentIndex(0);
+        tabWidget->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(reader);
@@ -210,7 +373,31 @@ public:
         reader->setWindowTitle(QCoreApplication::translate("reader", "Form", nullptr));
         label_5->setText(QString());
         label_2->setText(QString());
+        pushButton_3->setText(QCoreApplication::translate("reader", "\n"
+"\320\236\320\261\320\275\320\276\320\262\320\270\321\202\321\214\n"
+"", nullptr));
+        label_25->setText(QString());
+        label_26->setText(QString());
+        label_27->setText(QString());
+        label_28->setText(QString());
+        label_29->setText(QString());
+        label_30->setText(QString());
+        label_31->setText(QString());
+        label_32->setText(QString());
+        label_33->setText(QString());
         tabWidget->setTabText(tabWidget->indexOf(tab), QCoreApplication::translate("reader", " \320\234\320\276\320\270 \320\272\320\275\320\270\320\263\320\270", nullptr));
+        pushButton->setText(QCoreApplication::translate("reader", "\n"
+"\320\236\320\261\320\275\320\276\320\262\320\270\321\202\321\214\n"
+"", nullptr));
+        label_34->setText(QString());
+        label_35->setText(QString());
+        label_36->setText(QString());
+        label_37->setText(QString());
+        label_38->setText(QString());
+        label_39->setText(QString());
+        label_40->setText(QString());
+        label_41->setText(QString());
+        label_42->setText(QString());
         tabWidget->setTabText(tabWidget->indexOf(tab_2), QCoreApplication::translate("reader", "\320\230\321\201\321\202\320\276\321\200\320\270\321\217 \320\262\320\267\321\217\321\202\321\213\321\205 \320\272\320\275\320\270\320\263", nullptr));
         toolButton_2->setText(QString());
         label_10->setText(QString());

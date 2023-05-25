@@ -17,23 +17,19 @@ reader::reader(QWidget *parent) :
 
     //создать стартовую последовать
     //ui->label->setPixmap(reader::GetNew((nnn)));
-    ui->tableWidget->setRowCount(8);
-    ui->tableWidget->setColumnCount(5);
+    //ui->tableWidget->setRowCount(8);
+    ui->tableWidget_4->setColumnCount(5);
     QStringList a = { "Название", "Дата выдачи", "Срок конца аренды", "Оставшееся количество дней", "Штраф"};
-    ui->tableWidget->setHorizontalHeaderLabels(a);
-    ui->tableWidget->horizontalHeader()->setSortIndicatorShown(true);
-    ui->tableWidget->setSortingEnabled(1);
-    ui->tableWidget->horizontalHeader()->resizeSection(0,400);
-    ui->tableWidget->horizontalHeader()->resizeSection(1,200);
-    ui->tableWidget->horizontalHeader()->resizeSection(2,280);
-    ui->tableWidget->horizontalHeader()->resizeSection(3,280);
-    ui->tableWidget->horizontalHeader()->resizeSection(4,90);
-    for (int i = 0; i < 8; i++)
-    {
-        ui->tableWidget->verticalHeader()->resizeSection(i,95);
-    }
+    ui->tableWidget_4->setHorizontalHeaderLabels(a);
+    ui->tableWidget_4->horizontalHeader()->setSortIndicatorShown(true);
+    ui->tableWidget_4->setSortingEnabled(1);
+    ui->tableWidget_4->horizontalHeader()->resizeSection(0,400);
+    ui->tableWidget_4->horizontalHeader()->resizeSection(1,200);
+    ui->tableWidget_4->horizontalHeader()->resizeSection(2,280);
+    ui->tableWidget_4->horizontalHeader()->resizeSection(3,280);
+    ui->tableWidget_4->horizontalHeader()->resizeSection(4,90);
     a = {"Название", "Дата выдачи", "Срок конца аренды"};
-    ui->tableWidget_2->setRowCount(20);
+    //ui->tableWidget_2->setRowCount(20);
     ui->tableWidget_2->setColumnCount(3);
     ui->tableWidget_2->setHorizontalHeaderLabels(a);
     ui->tableWidget_2->horizontalHeader()->setSortIndicatorShown(true);
@@ -41,10 +37,6 @@ reader::reader(QWidget *parent) :
     ui->tableWidget_2->horizontalHeader()->resizeSection(0,410);
     ui->tableWidget_2->horizontalHeader()->resizeSection(1,410);
     ui->tableWidget_2->horizontalHeader()->resizeSection(2,410);
-    for (int i = 0; i < 20; i++)
-    {
-        ui->tableWidget_2->verticalHeader()->resizeSection(i,38);
-    }
 
 }
 
