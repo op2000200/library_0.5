@@ -56,7 +56,7 @@ DirectorMainWindow::DirectorMainWindow(QWidget *parent) :
     }
     QTextStream writeStream(&file1);
     QString buf, buff;
-    writeStream << c << "\n";
+    writeStream << c;
     for (int i = 0; i < c; i++)
     {
 
@@ -67,7 +67,7 @@ DirectorMainWindow::DirectorMainWindow(QWidget *parent) :
         //buf = "hell";
         //qDebug() << buff;
         //file1.write(buf.toUtf8());
-        writeStream << buf.toUtf8();
+        writeStream << "\n" << buf;
         buf = ""; buff = "";
     }
 
@@ -110,6 +110,7 @@ QPixmap  DirectorMainWindow::GetNew(QImage& img)
 
 void DirectorMainWindow::refresh(QFile& f)
 {
+    f.seek(0);
     QTableWidgetItem *qq;
     qq = new QTableWidgetItem();
 

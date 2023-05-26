@@ -65,7 +65,7 @@ reader::reader(QWidget *parent) :
     }
     QTextStream writeStream(&file4);
     QString buf;
-    writeStream << c << "\n";
+    writeStream << c;
     for (int i = 0; i < c; i++)
     {
         buf = a[i].join(" ");
@@ -75,7 +75,7 @@ reader::reader(QWidget *parent) :
         //buf = "hell";
         //qDebug() << buff;
         //file4.write(buf.toUtf8());
-        writeStream << buf.toUtf8();
+        writeStream << "\n" << buf;
         buf = ""; //buff = "";
     }
 
@@ -189,12 +189,15 @@ void reader::refresh(QFile &f)
         }
         ui->tableWidget_4->setItem(i,0,qq);
 
-        qq = new QTableWidgetItem();
-        qq->setData(Qt::DisplayRole, QVariant(d[i][1]));
 
         qq = new QTableWidgetItem();
         qq->setData(Qt::DisplayRole, QVariant(d[i][0]));
         ui->tableWidget_4->setItem(i,5,qq);
+
+        qq = new QTableWidgetItem();
+        qq->setData(Qt::DisplayRole, QVariant(d[i][1]));
+
+
 
         qDebug() << d[i][1];
 
