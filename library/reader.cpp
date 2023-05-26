@@ -41,13 +41,14 @@ reader::reader(QWidget *parent) :
     ui->tableWidget_4->hideColumn(5);
     a1 = {"Название", "Дата выдачи", "Срок конца аренды"};
     //ui->tableWidget_2->setRowCount(20);
-    ui->tableWidget_2->setColumnCount(3);
+    ui->tableWidget_2->setColumnCount(4);
     ui->tableWidget_2->setHorizontalHeaderLabels(a1);
     ui->tableWidget_2->horizontalHeader()->setSortIndicatorShown(true);
     ui->tableWidget_2->setSortingEnabled(1);
     ui->tableWidget_2->horizontalHeader()->resizeSection(0,410);
     ui->tableWidget_2->horizontalHeader()->resizeSection(1,410);
     ui->tableWidget_2->horizontalHeader()->resizeSection(2,410);
+    ui->tableWidget_2->hideColumn(3);
 
     ui->tableWidget_4->setEditTriggers(QAbstractItemView::NoEditTriggers);
     ui->tableWidget_2->setEditTriggers(QAbstractItemView::NoEditTriggers);
@@ -288,6 +289,104 @@ void reader::on_tableWidget_4_cellDoubleClicked(int row, int column)
     connect(this, &reader::sendbook, bk, &book::openBook);
     //qDebug() << ui->tableWidget_4->item(row,5)->text().toInt();
     emit sendbook(ui->tableWidget_4->item(row,5)->text().toInt());
+    bk->show();
+}
+
+void reader::refresh1(QFile &f)
+{
+    f.seek(0);
+    QString q = f.readLine();
+
+    int c = q.toInt();
+    QStringList *a = new QStringList[c];
+    QString b;
+    for (int j = 0; j < c; j++)
+    {
+        b = f.readLine();
+        a[j] = b.split(" ");
+    }
+    QFile list("C:\\Git\\Library05\\library_0.5\\library\\resourses\\DataBase\\user\\" + QString::number(userID2) + "\\history.txt");
+    list.open(QIODevice::ReadOnly | QIODevice::Text);
+    list.seek(0);
+    q = list.readLine();
+    c = q.toInt();
+
+    QStringList *d = new QStringList[c];
+    for (int i = 0; i < c; i++)
+    {
+        b = list.readLine();
+        d[i] = b.split(' ');
+    }
+
+    QTableWidgetItem *qq;
+    qq = new QTableWidgetItem();
+    QString format = "dd.MM.yyyy";
+    QDateTime begin, end;
+    int diff, hell; //diffihelman hahahah
+    ui->tableWidget_2->setRowCount(c);
+    ui->tableWidget_2->verticalHeader()->hide();
+    for (int i = 0; i < c; i++)
+        ui->tableWidget_2->resizeRowToContents(i);
+    for (int i = 0; i < c; i++)
+    {
+        for (int o = 0; o < c; o++)
+        {
+            if (a[o][0] == d[i][0])
+            {
+                qq = new QTableWidgetItem();
+                qq->setData(Qt::DisplayRole, QVariant(a[o][1].replace(QRegularExpression("[_]"), " ")));
+                //hell = a[o][4].toInt();
+
+            }
+        }
+        ui->tableWidget_2->setItem(i,0,qq); //название
+
+
+        qq = new QTableWidgetItem();
+        qq->setData(Qt::DisplayRole, QVariant(d[i][0]));
+        ui->tableWidget_2->setItem(i,3,qq); //айди
+
+        qq = new QTableWidgetItem();
+        qq->setData(Qt::DisplayRole, QVariant(d[i][1]));
+
+
+
+        qDebug() << d[i][1];
+
+        ui->tableWidget_2->setItem(i,1,qq); //дата взятия
+
+        begin = QDateTime::fromString(d[i][1], format);
+        end = QDateTime::fromString(d[i][1], format);
+        end = end.addDays(d[i][2].toInt());
+
+        qDebug() << begin;
+
+        qq = new QTableWidgetItem();
+        qq->setData(Qt::DisplayRole, QVariant(end.toString(format)));
+
+        ui->tableWidget_2->setItem(i,2,qq); //дата конца
+    }
+
+
+
+    delete[] a;
+    list.close();
+
+}
+
+
+void reader::on_pushButton_clicked()
+{
+    refresh1(file4);
+}
+
+
+void reader::on_tableWidget_2_cellDoubleClicked(int row, int column)
+{
+    bk = new book;
+    connect(this, &reader::sendbook, bk, &book::openBook);
+    //qDebug() << ui->tableWidget_4->item(row,5)->text().toInt();
+    emit sendbook(ui->tableWidget_2->item(row,3)->text().toInt());
     bk->show();
 }
 

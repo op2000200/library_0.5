@@ -41,17 +41,17 @@ public:
     {
         if (book->objectName().isEmpty())
             book->setObjectName("book");
-        book->resize(1341, 893);
-        book->setStyleSheet(QString::fromUtf8("background-color: rgb(151, 172, 138);"));
+        book->resize(800, 543);
+        book->setStyleSheet(QString::fromUtf8("background-color: rgb(161, 182, 138);"));
         toolButton = new QToolButton(book);
         toolButton->setObjectName("toolButton");
-        toolButton->setGeometry(QRect(450, 10, 40, 40));
+        toolButton->setGeometry(QRect(740, 10, 41, 40));
         toolButton->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 0, 0);\n"
 "border-radius: 20px;\n"
 "border: 0px;"));
         frame = new QFrame(book);
         frame->setObjectName("frame");
-        frame->setGeometry(QRect(0, 0, 501, 31));
+        frame->setGeometry(QRect(0, 0, 801, 541));
         frame->setStyleSheet(QString::fromUtf8("border: 5px solid rgb(51,51,51);"));
         frame->setFrameShape(QFrame::StyledPanel);
         frame->setFrameShadow(QFrame::Raised);
@@ -90,39 +90,40 @@ public:
         label_6->setStyleSheet(QString::fromUtf8("color: rgb(81, 81, 81);"));
         label_7 = new QLabel(book);
         label_7->setObjectName("label_7");
-        label_7->setGeometry(QRect(230, 60, 261, 32));
+        label_7->setGeometry(QRect(230, 60, 561, 32));
         label_7->setFont(font);
         label_7->setStyleSheet(QString::fromUtf8("color: rgb(81, 81, 81);"));
         label_7->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         label_8 = new QLabel(book);
         label_8->setObjectName("label_8");
-        label_8->setGeometry(QRect(230, 100, 261, 32));
+        label_8->setGeometry(QRect(230, 100, 561, 32));
         label_8->setFont(font);
         label_8->setStyleSheet(QString::fromUtf8("color: rgb(81, 81, 81);"));
         label_8->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         label_9 = new QLabel(book);
         label_9->setObjectName("label_9");
-        label_9->setGeometry(QRect(230, 140, 261, 32));
+        label_9->setGeometry(QRect(230, 140, 561, 32));
         label_9->setFont(font);
         label_9->setStyleSheet(QString::fromUtf8("color: rgb(81, 81, 81);"));
         label_9->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         label_10 = new QLabel(book);
         label_10->setObjectName("label_10");
-        label_10->setGeometry(QRect(230, 180, 261, 32));
+        label_10->setGeometry(QRect(230, 180, 561, 32));
         label_10->setFont(font);
         label_10->setStyleSheet(QString::fromUtf8("color: rgb(81, 81, 81);"));
         label_10->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         label_11 = new QLabel(book);
         label_11->setObjectName("label_11");
-        label_11->setGeometry(QRect(230, 220, 261, 32));
+        label_11->setGeometry(QRect(230, 220, 561, 32));
         label_11->setFont(font);
         label_11->setStyleSheet(QString::fromUtf8("color: rgb(81, 81, 81);"));
         label_11->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         plainTextEdit = new QPlainTextEdit(book);
         plainTextEdit->setObjectName("plainTextEdit");
-        plainTextEdit->setGeometry(QRect(0, 300, 501, 231));
+        plainTextEdit->setGeometry(QRect(5, 300, 791, 231));
         plainTextEdit->setFont(font);
         plainTextEdit->setStyleSheet(QString::fromUtf8("color: rgb(81, 81, 81);"));
+        plainTextEdit->setFrameShape(QFrame::NoFrame);
         frame->raise();
         toolButton->raise();
         label->raise();

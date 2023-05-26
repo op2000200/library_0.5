@@ -28,6 +28,10 @@ private slots:
 
     void on_tableWidget_4_cellDoubleClicked(int row, int column);
 
+    void on_pushButton_clicked();
+
+    void on_tableWidget_2_cellDoubleClicked(int row, int column);
+
 private:
     Ui::reader *ui;
     book *bk;
@@ -36,6 +40,7 @@ public:
 
     QPixmap GetNew(QImage& img);
     void refresh(QFile &f);
+    void refresh1(QFile &f);
 
 
 public slots:
