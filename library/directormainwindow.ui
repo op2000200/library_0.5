@@ -211,7 +211,7 @@ border-right-color: rgb(172, 172, 172);
     <enum>QTabWidget::Rounded</enum>
    </property>
    <property name="currentIndex">
-    <number>2</number>
+    <number>0</number>
    </property>
    <widget class="QWidget" name="tab">
     <property name="styleSheet">
@@ -659,7 +659,7 @@ border-radius: 30px;</string>
     <rect>
      <x>500</x>
      <y>119</y>
-     <width>1375</width>
+     <width>1401</width>
      <height>931</height>
     </rect>
    </property>
@@ -675,9 +675,9 @@ border-radius: 30px;</string>
    <property name="geometry">
     <rect>
      <x>1855</x>
-     <y>670</y>
-     <width>5</width>
-     <height>371</height>
+     <y>160</y>
+     <width>3</width>
+     <height>881</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -692,7 +692,7 @@ border-radius: 30px;</string>
     <rect>
      <x>530</x>
      <y>1005</y>
-     <width>1321</width>
+     <width>1341</width>
      <height>41</height>
     </rect>
    </property>

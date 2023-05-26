@@ -52,3 +52,15 @@ void bibli::on_toolButton_3_clicked()
     this->destroy();
 }
 
+
+void bibli::on_pushButton_3_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(0);
+}
+
+
+void bibli::on_pushButton_4_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(1);
+}
+

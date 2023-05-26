@@ -401,16 +401,16 @@ public:
 "border-radius: 30px;"));
         label_9 = new QLabel(DirectorMainWindow);
         label_9->setObjectName("label_9");
-        label_9->setGeometry(QRect(500, 119, 1375, 931));
+        label_9->setGeometry(QRect(500, 119, 1401, 931));
         label_9->setStyleSheet(QString::fromUtf8("background-color: rgb(172, 172, 172);\n"
 "border-radius: 30px;"));
         label_10 = new QLabel(DirectorMainWindow);
         label_10->setObjectName("label_10");
-        label_10->setGeometry(QRect(1855, 670, 5, 371));
+        label_10->setGeometry(QRect(1855, 160, 3, 881));
         label_10->setStyleSheet(QString::fromUtf8("background-color: rgb(172, 172, 172);"));
         label_11 = new QLabel(DirectorMainWindow);
         label_11->setObjectName("label_11");
-        label_11->setGeometry(QRect(530, 1005, 1321, 41));
+        label_11->setGeometry(QRect(530, 1005, 1341, 41));
         label_11->setStyleSheet(QString::fromUtf8("background-color: rgb(172, 172, 172);"));
         DATA = new QLabel(DirectorMainWindow);
         DATA->setObjectName("DATA");
