@@ -68,13 +68,15 @@ reader::reader(QWidget *parent) :
     writeStream << c << "\n";
     for (int i = 0; i < c; i++)
     {
-        for (int j = 0; j < a[i].size(); j++)
-        {
-            buf+=a[i][j].replace(QRegularExpression("[ ]+"), "_") + " ";
-        }
+        buf = a[i].join(" ");
         buf.chop(1);
-        writeStream << buf;
-        buf = "";
+        //qDebug() << buf;
+
+        //buf = "hell";
+        //qDebug() << buff;
+        //file4.write(buf.toUtf8());
+        writeStream << buf.toUtf8();
+        buf = ""; //buff = "";
     }
 
     delete[] a;

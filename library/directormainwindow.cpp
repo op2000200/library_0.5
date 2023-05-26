@@ -55,43 +55,25 @@ DirectorMainWindow::DirectorMainWindow(QWidget *parent) :
         a[j] = b.split(" ");
     }
     QTextStream writeStream(&file1);
-    QString buf;
+    QString buf, buff;
     writeStream << c << "\n";
     for (int i = 0; i < c; i++)
     {
-        for (int j = 0; j < a[i].size(); j++)
-        {
-            buf+=a[i][j].replace(QRegularExpression("[ ]+"), "_") + " ";
-        }
-        buf.chop(10);
-        writeStream << buf;
-        buf = "";
+
+        buf = a[i].join(" ");
+        buf.chop(1);
+        //qDebug() << buf;
+
+        //buf = "hell";
+        //qDebug() << buff;
+        //file1.write(buf.toUtf8());
+        writeStream << buf.toUtf8();
+        buf = ""; buff = "";
     }
 
     delete[] a;
     file.seek(0);
     file1.flush();
-
-
-
-
-
-
-
-    //QTableView *view = new QTableView;
-         //view->setModel(model);
-         //view->show();
-    //connect(this, &DirectorMainWindow::signal, w, &HelloScreen::slot);
-
-
-    /*
-    QThread* thread = new QThread;
-    clockss* cs = new clockss;
-    cs->moveToThread(thread);
-    cs->time(ui);
-    //thread->start();
-    //refreshtime();
-*/
 }
 
 DirectorMainWindow::~DirectorMainWindow()
