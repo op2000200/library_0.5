@@ -76,6 +76,7 @@ public:
     QLabel *label_14;
     QLabel *label_9;
     QToolButton *toolButton_3;
+    QPushButton *pushButton_2;
 
     void setupUi(QWidget *reader)
     {
@@ -342,6 +343,14 @@ public:
         toolButton_3->setGeometry(QRect(1810, 60, 91, 40));
         toolButton_3->setStyleSheet(QString::fromUtf8("background-color: rgb(86, 86, 86);\n"
 "border-radius: 20px;"));
+        pushButton_2 = new QPushButton(reader);
+        pushButton_2->setObjectName("pushButton_2");
+        pushButton_2->setGeometry(QRect(40, 750, 391, 281));
+        QFont font2;
+        font2.setPointSize(52);
+        pushButton_2->setFont(font2);
+        pushButton_2->setStyleSheet(QString::fromUtf8("background-color: rgb(91, 102, 96);\n"
+"border-radius: 30px;"));
         label_2->raise();
         toolButton_2->raise();
         toolButton->raise();
@@ -360,6 +369,7 @@ public:
         label_8->raise();
         DATA->raise();
         toolButton_3->raise();
+        pushButton_2->raise();
 
         retranslateUi(reader);
 
@@ -415,6 +425,8 @@ public:
         label_14->setText(QCoreApplication::translate("reader", "\320\230\320\274\321\217 \320\244\320\260\320\274\320\270\320\273\320\270\321\217 \320\236\321\202\321\207\320\265\321\201\321\202\320\262\320\276", nullptr));
         label_9->setText(QString());
         toolButton_3->setText(QCoreApplication::translate("reader", "\320\222\320\253\320\245\320\236\320\224", nullptr));
+        pushButton_2->setText(QCoreApplication::translate("reader", "\320\241\320\274\320\276\321\202\321\200\320\265\321\202\321\214\n"
+"\320\262\321\201\320\265 \320\272\320\275\320\270\320\263\320\270", nullptr));
     } // retranslateUi
 
 };

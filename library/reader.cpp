@@ -9,6 +9,7 @@
 #include <QGraphicsView>
 #include <QFile>
 #include <QDateTime>
+#include "allbook.h"
 
 int userID2;
 QString Curpath3 = "C:\\Git\\Library05\\library_0.5\\library\\resourses\\DataBase\\shared\\books"+ QDate::currentDate().toString().replace(QRegularExpression("[ ]"), "_")+"_"+QTime::currentTime().toString().replace(QRegularExpression("[:]"), "_")+".txt";
@@ -82,6 +83,7 @@ reader::reader(QWidget *parent) :
 
     delete[] a;
     file5.seek(0);
+    writeStream << "\n" << "\n" << "\n";
     file4.flush();
 
 }
@@ -137,11 +139,15 @@ void reader::readData(int ID)
 void reader::on_toolButton_3_clicked()
 {
     emit exiting();
+    file4.close();
+    file5.close();
     this->destroy();
+
 }
 
 void reader::refresh(QFile &f)
 {
+    //readAgain();
 
     f.seek(0);
     QString q = f.readLine();
@@ -294,6 +300,7 @@ void reader::on_tableWidget_4_cellDoubleClicked(int row, int column)
 
 void reader::refresh1(QFile &f)
 {
+    //readAgain();
     f.seek(0);
     QString q = f.readLine();
 
@@ -351,7 +358,7 @@ void reader::refresh1(QFile &f)
 
 
 
-        qDebug() << d[i][1];
+        //qDebug() << d[i][1];
 
         ui->tableWidget_2->setItem(i,1,qq); //дата взятия
 
@@ -359,10 +366,10 @@ void reader::refresh1(QFile &f)
         end = QDateTime::fromString(d[i][1], format);
         end = end.addDays(d[i][2].toInt());
 
-        qDebug() << begin;
+        qDebug() << end.addDays(d[i][2].toInt()).toString(format);
 
         qq = new QTableWidgetItem();
-        qq->setData(Qt::DisplayRole, QVariant(end.toString(format)));
+        qq->setData(Qt::DisplayRole, QVariant(end.addDays(d[i][2].toInt()).toString(format)));
 
         ui->tableWidget_2->setItem(i,2,qq); //дата конца
     }
@@ -370,6 +377,9 @@ void reader::refresh1(QFile &f)
 
 
     delete[] a;
+    delete[] d;
+    //delete qq;
+
     list.close();
 
 }
@@ -388,5 +398,12 @@ void reader::on_tableWidget_2_cellDoubleClicked(int row, int column)
     //qDebug() << ui->tableWidget_4->item(row,5)->text().toInt();
     emit sendbook(ui->tableWidget_2->item(row,3)->text().toInt());
     bk->show();
+}
+
+
+void reader::on_pushButton_2_clicked()
+{
+    llbk = new allbook;
+    llbk->show();
 }
 

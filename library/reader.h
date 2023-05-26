@@ -4,6 +4,7 @@
 #include <QWidget>
 #include <QFile>
 #include <book.h>
+#include "allbook.h"
 
 namespace Ui {
 class reader;
@@ -32,9 +33,12 @@ private slots:
 
     void on_tableWidget_2_cellDoubleClicked(int row, int column);
 
+    void on_pushButton_2_clicked();
+
 private:
     Ui::reader *ui;
     book *bk;
+    allbook *llbk;
 
 public:
 

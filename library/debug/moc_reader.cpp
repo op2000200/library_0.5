@@ -26,7 +26,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 namespace {
 struct qt_meta_stringdata_reader_t {
-    uint offsetsAndSizes[30];
+    uint offsetsAndSizes[32];
     char stringdata0[7];
     char stringdata1[8];
     char stringdata2[1];
@@ -41,7 +41,8 @@ struct qt_meta_stringdata_reader_t {
     char stringdata11[7];
     char stringdata12[22];
     char stringdata13[35];
-    char stringdata14[9];
+    char stringdata14[24];
+    char stringdata15[9];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_reader_t::offsetsAndSizes) + ofs), len 
@@ -61,7 +62,8 @@ Q_CONSTINIT static const qt_meta_stringdata_reader_t qt_meta_stringdata_reader =
         QT_MOC_LITERAL(161, 6),  // "column"
         QT_MOC_LITERAL(168, 21),  // "on_pushButton_clicked"
         QT_MOC_LITERAL(190, 34),  // "on_tableWidget_2_cellDoubleCl..."
-        QT_MOC_LITERAL(225, 8)   // "readData"
+        QT_MOC_LITERAL(225, 23),  // "on_pushButton_2_clicked"
+        QT_MOC_LITERAL(249, 8)   // "readData"
     },
     "reader",
     "exiting",
@@ -77,6 +79,7 @@ Q_CONSTINIT static const qt_meta_stringdata_reader_t qt_meta_stringdata_reader =
     "column",
     "on_pushButton_clicked",
     "on_tableWidget_2_cellDoubleClicked",
+    "on_pushButton_2_clicked",
     "readData"
 };
 #undef QT_MOC_LITERAL
@@ -88,7 +91,7 @@ Q_CONSTINIT static const uint qt_meta_data_reader[] = {
       10,       // revision
        0,       // classname
        0,    0, // classinfo
-      10,   14, // methods
+      11,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -96,18 +99,19 @@ Q_CONSTINIT static const uint qt_meta_data_reader[] = {
        2,       // signalCount
 
  // signals: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,   74,    2, 0x06,    1 /* Public */,
-       3,    1,   75,    2, 0x06,    2 /* Public */,
+       1,    0,   80,    2, 0x06,    1 /* Public */,
+       3,    1,   81,    2, 0x06,    2 /* Public */,
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       5,    0,   78,    2, 0x08,    4 /* Private */,
-       6,    0,   79,    2, 0x08,    5 /* Private */,
-       7,    0,   80,    2, 0x08,    6 /* Private */,
-       8,    0,   81,    2, 0x08,    7 /* Private */,
-       9,    2,   82,    2, 0x08,    8 /* Private */,
-      12,    0,   87,    2, 0x08,   11 /* Private */,
-      13,    2,   88,    2, 0x08,   12 /* Private */,
-      14,    1,   93,    2, 0x0a,   15 /* Public */,
+       5,    0,   84,    2, 0x08,    4 /* Private */,
+       6,    0,   85,    2, 0x08,    5 /* Private */,
+       7,    0,   86,    2, 0x08,    6 /* Private */,
+       8,    0,   87,    2, 0x08,    7 /* Private */,
+       9,    2,   88,    2, 0x08,    8 /* Private */,
+      12,    0,   93,    2, 0x08,   11 /* Private */,
+      13,    2,   94,    2, 0x08,   12 /* Private */,
+      14,    0,   99,    2, 0x08,   15 /* Private */,
+      15,    1,  100,    2, 0x0a,   16 /* Public */,
 
  // signals: parameters
     QMetaType::Void,
@@ -121,6 +125,7 @@ Q_CONSTINIT static const uint qt_meta_data_reader[] = {
     QMetaType::Void, QMetaType::Int, QMetaType::Int,   10,   11,
     QMetaType::Void,
     QMetaType::Void, QMetaType::Int, QMetaType::Int,   10,   11,
+    QMetaType::Void,
     QMetaType::Void, QMetaType::Int,    4,
 
        0        // eod
@@ -158,6 +163,8 @@ Q_CONSTINIT const QMetaObject reader::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<int, std::false_type>,
         QtPrivate::TypeAndForceComplete<int, std::false_type>,
+        // method 'on_pushButton_2_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'readData'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<int, std::false_type>
@@ -180,7 +187,8 @@ void reader::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void
         case 6: _t->on_tableWidget_4_cellDoubleClicked((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2]))); break;
         case 7: _t->on_pushButton_clicked(); break;
         case 8: _t->on_tableWidget_2_cellDoubleClicked((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2]))); break;
-        case 9: _t->readData((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 9: _t->on_pushButton_2_clicked(); break;
+        case 10: _t->readData((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -221,13 +229,13 @@ int reader::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 10)
+        if (_id < 11)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 10;
+        _id -= 11;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 10)
+        if (_id < 11)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 10;
+        _id -= 11;
     }
     return _id;
 }

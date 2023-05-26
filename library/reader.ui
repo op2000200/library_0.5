@@ -639,6 +639,29 @@ border-radius: 20px;</string>
     <string>ВЫХОД</string>
    </property>
   </widget>
+  <widget class="QPushButton" name="pushButton_2">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>750</y>
+     <width>391</width>
+     <height>281</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>52</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(91, 102, 96);
+border-radius: 30px;</string>
+   </property>
+   <property name="text">
+    <string>Смотреть
+все книги</string>
+   </property>
+  </widget>
   <zorder>label_2</zorder>
   <zorder>toolButton_2</zorder>
   <zorder>toolButton</zorder>
@@ -657,6 +680,7 @@ border-radius: 20px;</string>
   <zorder>label_8</zorder>
   <zorder>DATA</zorder>
   <zorder>toolButton_3</zorder>
+  <zorder>pushButton_2</zorder>
  </widget>
  <resources/>
  <connections/>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>allbook</class>
+ <widget class="QWidget" name="allbook">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1312</width>
+    <height>753</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(151, 172, 138);</string>
+  </property>
+  <widget class="QTableWidget" name="tableWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>80</y>
+     <width>1291</width>
+     <height>661</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
+   </property>
+   <attribute name="horizontalHeaderMinimumSectionSize">
+    <number>0</number>
+   </attribute>
+  </widget>
+  <widget class="QToolButton" name="toolButton">
+   <property name="geometry">
+    <rect>
+     <x>1260</x>
+     <y>10</y>
+     <width>41</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 0, 0);
+border-radius: 20px;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>79</width>
+     <height>48</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(91, 102, 96);
+border-radius: 10px;</string>
+   </property>
+   <property name="text">
+    <string>
+Обновить
+</string>
+   </property>
+  </widget>
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1311</width>
+     <height>751</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 5px solid rgb(51,51,51);</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <property name="lineWidth">
+    <number>5</number>
+   </property>
+  </widget>
+  <zorder>frame</zorder>
+  <zorder>tableWidget</zorder>
+  <zorder>toolButton</zorder>
+  <zorder>pushButton</zorder>
+  <zorder>toolButton</zorder>
+  <zorder>pushButton</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
