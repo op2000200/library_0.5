@@ -63,7 +63,7 @@ DirectorMainWindow::DirectorMainWindow(QWidget *parent) :
         {
             buf+=a[i][j].replace(QRegularExpression("[ ]+"), "_") + " ";
         }
-        buf.chop(1);
+        buf.chop(10);
         writeStream << buf;
         buf = "";
     }

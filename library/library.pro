@@ -10,6 +10,7 @@ CONFIG += c++17
 
 SOURCES += \
     bibli.cpp \
+    book.cpp \
     directormainwindow.cpp \
     main.cpp \
     helloscreen.cpp \
@@ -17,12 +18,14 @@ SOURCES += \
 
 HEADERS += \
     bibli.h \
+    book.h \
     directormainwindow.h \
     helloscreen.h \
     reader.h
 
 FORMS += \
     bibli.ui \
+    book.ui \
     directormainwindow.ui \
     helloscreen.ui \
     reader.ui
