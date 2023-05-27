@@ -49,6 +49,8 @@ private slots:
 
     void on_lineEdit_5_returnPressed();
 
+    void on_pushButton_6_clicked();
+
 private:
     Ui::bibli *ui;
 

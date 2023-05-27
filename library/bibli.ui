@@ -608,6 +608,9 @@ color: rgb(213, 0, 0);</string>
        <property name="styleSheet">
         <string notr="true">border: 1px solid black;</string>
        </property>
+       <property name="inputMask">
+        <string/>
+       </property>
        <property name="placeholderText">
         <string>Количество дней аренды</string>
        </property>

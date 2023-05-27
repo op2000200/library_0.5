@@ -84,7 +84,7 @@ void bibli::on_pushButton_7_clicked()
 
 void bibli::on_checkBox_4_clicked()
 {
-    if (ui->checkBox_4->isChecked())
+    if (vd1 == 1 and vd2 == 1 and vd3 == 1 and ui->checkBox_4->isChecked() == 1)
     {
         ui->pushButton_6->setEnabled(1);
     }
@@ -234,8 +234,8 @@ bool bibli::bookExist(QString login,QString ID)
 
 bool bibli::bookExist(QString ID)
 {
-    QFile file("C:\\Git\\Library05\\library_0.5\\library\\resourses\\DataBase\\shared\\book.txt");
-    file.open(QIODevice::ReadOnly);
+    QFile file("C:\\Git\\Library05\\library_0.5\\library\\resourses\\DataBase\\shared\\books.txt");
+    file.open(QIODevice::ReadOnly | QIODevice::Text);
     QString q = file.readLine();
     int c = q.toInt();
     QStringList *a = new QStringList[c];
@@ -388,13 +388,6 @@ void bibli::on_pushButton_5_clicked()
     file1.write("\n");
 
 
-
-
-
-
-
-
-
     QFile file2("C:\\Git\\Library05\\library_0.5\\library\\resourses\\DataBase\\user\\"+id+"\\history.txt");
     file2.open(QIODevice::ReadWrite | QIODevice::Text);
 
@@ -417,9 +410,6 @@ void bibli::on_pushButton_5_clicked()
 
 
 
-
-
-
     file1.close();
     file2.close();
 }
@@ -438,7 +428,7 @@ void bibli::on_lineEdit_4_returnPressed()
         QString aa = "background-color: red;border-radius: 15px;";
         ui->label_22->setStyleSheet(aa);
     }
-    if (vd1 == 1 and vd2 == 1 and vd3 == 0)
+    if (vd1 == 1 and vd2 == 1 and vd3 == 1 and ui->checkBox_4->isChecked() == 1)
     {
         ui->pushButton_6->setEnabled(1);
     }
@@ -456,14 +446,14 @@ void bibli::on_lineEdit_3_returnPressed()
     if (vd2 == 1)
     {
         QString aa = "background-color: green;border-radius: 15px;";
-        ui->label_22->setStyleSheet(aa);
+        ui->label_21->setStyleSheet(aa);
     }
     else
     {
         QString aa = "background-color: red;border-radius: 15px;";
-        ui->label_22->setStyleSheet(aa);
+        ui->label_21->setStyleSheet(aa);
     }
-    if (vd1 == 1 and vd2 == 1 and vd3 == 0)
+    if (vd1 == 1 and vd2 == 1 and vd3 == 1 and ui->checkBox_4->isChecked() == 1)
     {
         ui->pushButton_6->setEnabled(1);
     }
@@ -477,13 +467,67 @@ void bibli::on_lineEdit_3_returnPressed()
 
 void bibli::on_lineEdit_5_returnPressed()
 {
-    QFile file("C:\\Git\\Library05\\library_0.5\\library\\resourses\\DataBase\\shared\\book.txt");
+    if (ui->lineEdit_5->text() != "")
+    {
+        QFile file("C:\\Git\\Library05\\library_0.5\\library\\resourses\\DataBase\\shared\\books.txt");
+        file.open(QIODevice::ReadOnly);
+        QString q = file.readLine();
+        int c = q.toInt();
+        QStringList *a = new QStringList[c];
+        QString b;
+        QString id;
+        for (int j = 0; j < c; j++)
+        {
+            b = file.readLine();
+            a[j] = b.split(" ");
+        }
+        for (int j = 0; j < c; j++)
+        {
+            if (a[j][1] == ui->lineEdit->text())
+            {
+                id = a[j][0];
+            }
+        }
+        file.close();
+
+        for (int j = 0; j < c; j++)
+        {
+            if (a[j][0] == ui->lineEdit_3->text())
+            {
+                ui->label_25->setText(QString::number(a[j][4].toInt()*ui->lineEdit_5->text().toInt()));
+            }
+        }
+        vd3 = 1;
+
+    }
+    else
+    {
+        vd3 = 0;
+        ui->label_25->setText("");
+    }
+    if (vd1 == 1 and vd2 == 1 and vd3 == 1 and ui->checkBox_4->isChecked() == 1)
+    {
+        ui->pushButton_6->setEnabled(1);
+    }
+    else
+    {
+        ui->pushButton_6->setEnabled(0);
+    }
+    ui->label->setFocus();
+
+}
+
+
+void bibli::on_pushButton_6_clicked()
+{
+    QString userid, newbook;
+
+    QFile file("C:\\Git\\Library05\\library_0.5\\library\\resourses\\DataBase\\login\\login.txt");
     file.open(QIODevice::ReadOnly);
     QString q = file.readLine();
     int c = q.toInt();
     QStringList *a = new QStringList[c];
     QString b;
-    QString id;
     for (int j = 0; j < c; j++)
     {
         b = file.readLine();
@@ -491,11 +535,58 @@ void bibli::on_lineEdit_5_returnPressed()
     }
     for (int j = 0; j < c; j++)
     {
-        if (a[j][1] == ui->lineEdit->text())
+        if (a[j][1] == ui->lineEdit_4->text())
         {
-            id = a[j][0];
+            userid = a[j][0];
         }
     }
     file.close();
+    QFile file1("C:\\Git\\Library05\\library_0.5\\library\\resourses\\DataBase\\user\\"+userid+"\\bookfornow.txt");
+    file1.open(QIODevice::ReadWrite | QIODevice::Text);
+
+    QFile file2("C:\\Git\\Library05\\library_0.5\\library\\resourses\\DataBase\\shared\\books.txt");
+    file2.open(QIODevice::ReadOnly | QIODevice::Text);
+
+    q = file2.readLine();
+    c = q.toInt();
+    a = new QStringList[c];
+    for (int j = 0; j < c; j++)
+    {
+        b = file2.readLine();
+        a[j] = b.split(" ");
+    }
+
+    for (int j = 0; j < c; j++)
+    {
+        if (a[j][0] == ui->lineEdit_3->text())
+        {
+            newbook = a[j][0] + " " + QDateTime::currentDateTime().toString("dd.MM.yyyy") + " " + ui->lineEdit_5->text();
+        }
+    }
+    file2.close();
+
+
+
+    q = file1.readLine();
+    c = q.toInt();
+    a = new QStringList[c];
+    for (int j = 0; j < c; j++)
+    {
+        b = file1.readLine();
+        a[j] = b.split(" ");
+    }
+
+    file1.seek(0);
+    file1.write(QString::number(c+1).toUtf8());
+    for (int j = 0; j < c; j++)
+    {
+        b= "\n"+a[j].join(" ").toUtf8();
+        b.chop(1);
+        file1.write(b.toUtf8());
+    }
+    file1.write("\n" + newbook.toUtf8()+"\n");
+
+    file1.close();
+
 }
 

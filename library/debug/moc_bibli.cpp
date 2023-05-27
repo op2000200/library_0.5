@@ -26,7 +26,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 namespace {
 struct qt_meta_stringdata_bibli_t {
-    uint offsetsAndSizes[32];
+    uint offsetsAndSizes[40];
     char stringdata0[6];
     char stringdata1[8];
     char stringdata2[1];
@@ -41,8 +41,12 @@ struct qt_meta_stringdata_bibli_t {
     char stringdata11[26];
     char stringdata12[28];
     char stringdata13[24];
-    char stringdata14[9];
-    char stringdata15[3];
+    char stringdata14[28];
+    char stringdata15[28];
+    char stringdata16[28];
+    char stringdata17[24];
+    char stringdata18[9];
+    char stringdata19[3];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_bibli_t::offsetsAndSizes) + ofs), len 
@@ -62,8 +66,12 @@ Q_CONSTINIT static const qt_meta_stringdata_bibli_t qt_meta_stringdata_bibli = {
         QT_MOC_LITERAL(201, 25),  // "on_lineEdit_returnPressed"
         QT_MOC_LITERAL(227, 27),  // "on_lineEdit_2_returnPressed"
         QT_MOC_LITERAL(255, 23),  // "on_pushButton_5_clicked"
-        QT_MOC_LITERAL(279, 8),  // "readData"
-        QT_MOC_LITERAL(288, 2)   // "ID"
+        QT_MOC_LITERAL(279, 27),  // "on_lineEdit_4_returnPressed"
+        QT_MOC_LITERAL(307, 27),  // "on_lineEdit_3_returnPressed"
+        QT_MOC_LITERAL(335, 27),  // "on_lineEdit_5_returnPressed"
+        QT_MOC_LITERAL(363, 23),  // "on_pushButton_6_clicked"
+        QT_MOC_LITERAL(387, 8),  // "readData"
+        QT_MOC_LITERAL(396, 2)   // "ID"
     },
     "bibli",
     "exiting",
@@ -79,6 +87,10 @@ Q_CONSTINIT static const qt_meta_stringdata_bibli_t qt_meta_stringdata_bibli = {
     "on_lineEdit_returnPressed",
     "on_lineEdit_2_returnPressed",
     "on_pushButton_5_clicked",
+    "on_lineEdit_4_returnPressed",
+    "on_lineEdit_3_returnPressed",
+    "on_lineEdit_5_returnPressed",
+    "on_pushButton_6_clicked",
     "readData",
     "ID"
 };
@@ -91,7 +103,7 @@ Q_CONSTINIT static const uint qt_meta_data_bibli[] = {
       10,       // revision
        0,       // classname
        0,    0, // classinfo
-      13,   14, // methods
+      17,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -99,21 +111,25 @@ Q_CONSTINIT static const uint qt_meta_data_bibli[] = {
        1,       // signalCount
 
  // signals: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,   92,    2, 0x06,    1 /* Public */,
+       1,    0,  116,    2, 0x06,    1 /* Public */,
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       3,    0,   93,    2, 0x08,    2 /* Private */,
-       4,    0,   94,    2, 0x08,    3 /* Private */,
-       5,    0,   95,    2, 0x08,    4 /* Private */,
-       6,    0,   96,    2, 0x08,    5 /* Private */,
-       7,    0,   97,    2, 0x08,    6 /* Private */,
-       8,    0,   98,    2, 0x08,    7 /* Private */,
-       9,    0,   99,    2, 0x08,    8 /* Private */,
-      10,    0,  100,    2, 0x08,    9 /* Private */,
-      11,    0,  101,    2, 0x08,   10 /* Private */,
-      12,    0,  102,    2, 0x08,   11 /* Private */,
-      13,    0,  103,    2, 0x08,   12 /* Private */,
-      14,    1,  104,    2, 0x0a,   13 /* Public */,
+       3,    0,  117,    2, 0x08,    2 /* Private */,
+       4,    0,  118,    2, 0x08,    3 /* Private */,
+       5,    0,  119,    2, 0x08,    4 /* Private */,
+       6,    0,  120,    2, 0x08,    5 /* Private */,
+       7,    0,  121,    2, 0x08,    6 /* Private */,
+       8,    0,  122,    2, 0x08,    7 /* Private */,
+       9,    0,  123,    2, 0x08,    8 /* Private */,
+      10,    0,  124,    2, 0x08,    9 /* Private */,
+      11,    0,  125,    2, 0x08,   10 /* Private */,
+      12,    0,  126,    2, 0x08,   11 /* Private */,
+      13,    0,  127,    2, 0x08,   12 /* Private */,
+      14,    0,  128,    2, 0x08,   13 /* Private */,
+      15,    0,  129,    2, 0x08,   14 /* Private */,
+      16,    0,  130,    2, 0x08,   15 /* Private */,
+      17,    0,  131,    2, 0x08,   16 /* Private */,
+      18,    1,  132,    2, 0x0a,   17 /* Public */,
 
  // signals: parameters
     QMetaType::Void,
@@ -130,7 +146,11 @@ Q_CONSTINIT static const uint qt_meta_data_bibli[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void, QMetaType::Int,   15,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void, QMetaType::Int,   19,
 
        0        // eod
 };
@@ -168,6 +188,14 @@ Q_CONSTINIT const QMetaObject bibli::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_pushButton_5_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_lineEdit_4_returnPressed'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_lineEdit_3_returnPressed'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_lineEdit_5_returnPressed'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_pushButton_6_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'readData'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<int, std::false_type>
@@ -193,7 +221,11 @@ void bibli::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void 
         case 9: _t->on_lineEdit_returnPressed(); break;
         case 10: _t->on_lineEdit_2_returnPressed(); break;
         case 11: _t->on_pushButton_5_clicked(); break;
-        case 12: _t->readData((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 12: _t->on_lineEdit_4_returnPressed(); break;
+        case 13: _t->on_lineEdit_3_returnPressed(); break;
+        case 14: _t->on_lineEdit_5_returnPressed(); break;
+        case 15: _t->on_pushButton_6_clicked(); break;
+        case 16: _t->readData((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -227,13 +259,13 @@ int bibli::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 13)
+        if (_id < 17)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 13;
+        _id -= 17;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 13)
+        if (_id < 17)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 13;
+        _id -= 17;
     }
     return _id;
 }

@@ -538,7 +538,7 @@ public:
         retranslateUi(bibli);
 
         tabWidget->setCurrentIndex(0);
-        stackedWidget->setCurrentIndex(0);
+        stackedWidget->setCurrentIndex(1);
         stackedWidget_2->setCurrentIndex(0);
 
 
@@ -575,6 +575,7 @@ public:
         checkBox_4->setText(QString());
         label_22->setText(QString());
         label_23->setText(QCoreApplication::translate("bibli", "\320\236\321\202\320\274\320\265\321\202\321\214\321\202\320\265 \320\276\320\277\320\273\320\260\321\202\321\203 \320\260\321\200\320\265\320\275\320\264\321\213", nullptr));
+        lineEdit_5->setInputMask(QString());
         lineEdit_5->setPlaceholderText(QCoreApplication::translate("bibli", "\320\232\320\276\320\273\320\270\321\207\320\265\321\201\321\202\320\262\320\276 \320\264\320\275\320\265\320\271 \320\260\321\200\320\265\320\275\320\264\321\213", nullptr));
         label_25->setText(QString());
         pushButton_3->setText(QCoreApplication::translate("bibli", "\n"
