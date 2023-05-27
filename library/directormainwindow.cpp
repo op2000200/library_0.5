@@ -73,6 +73,7 @@ DirectorMainWindow::DirectorMainWindow(QWidget *parent) :
 
     delete[] a;
     file.seek(0);
+    file.close();
     file1.flush();
 }
 

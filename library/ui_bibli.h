@@ -44,18 +44,27 @@ public:
     QWidget *tab;
     QStackedWidget *stackedWidget;
     QWidget *page;
-    QPushButton *pushButton;
     QLabel *label_16;
     QLineEdit *lineEdit;
     QLineEdit *lineEdit_2;
     QLabel *label_17;
     QCheckBox *checkBox_3;
     QTableWidget *tableWidget;
-    QLineEdit *lineEdit_3;
     QLabel *label_18;
     QLabel *label_20;
+    QPushButton *pushButton_5;
     QWidget *page_2;
-    QToolButton *toolButton_4;
+    QPushButton *pushButton_6;
+    QLineEdit *lineEdit_3;
+    QLabel *label_21;
+    QLabel *label_19;
+    QLineEdit *lineEdit_4;
+    QCheckBox *checkBox_4;
+    QLabel *label_22;
+    QTableWidget *tableWidget_2;
+    QLabel *label_23;
+    QLineEdit *lineEdit_5;
+    QLabel *label_25;
     QFrame *frame_5;
     QWidget *horizontalLayoutWidget_3;
     QHBoxLayout *horizontalLayout_3;
@@ -71,6 +80,29 @@ public:
     QLabel *label_42;
     QWidget *tab_2;
     QWidget *tab_3;
+    QFrame *frame_6;
+    QWidget *horizontalLayoutWidget_4;
+    QHBoxLayout *horizontalLayout_4;
+    QPushButton *pushButton_7;
+    QLabel *label_52;
+    QLabel *label_43;
+    QLabel *label_44;
+    QLabel *label_45;
+    QLabel *label_46;
+    QLabel *label_47;
+    QLabel *label_48;
+    QLabel *label_49;
+    QLabel *label_50;
+    QStackedWidget *stackedWidget_2;
+    QWidget *page_3;
+    QLabel *label_26;
+    QLineEdit *lineEdit_6;
+    QLineEdit *lineEdit_7;
+    QTableWidget *tableWidget_3;
+    QLabel *label_29;
+    QPushButton *pushButton_9;
+    QLineEdit *lineEdit_8;
+    QWidget *page_4;
     QToolButton *toolButton;
     QLabel *label_8;
     QLabel *label_6;
@@ -164,12 +196,9 @@ public:
         stackedWidget->setGeometry(QRect(0, 90, 1291, 761));
         page = new QWidget();
         page->setObjectName("page");
-        pushButton = new QPushButton(page);
-        pushButton->setObjectName("pushButton");
-        pushButton->setGeometry(QRect(10, 370, 381, 24));
         label_16 = new QLabel(page);
         label_16->setObjectName("label_16");
-        label_16->setGeometry(QRect(10, 10, 390, 60));
+        label_16->setGeometry(QRect(0, 0, 390, 60));
         label_16->setFont(font);
         label_16->setStyleSheet(QString::fromUtf8("\n"
 "border-radius: 30px;\n"
@@ -177,15 +206,15 @@ public:
         label_16->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
         lineEdit = new QLineEdit(page);
         lineEdit->setObjectName("lineEdit");
-        lineEdit->setGeometry(QRect(10, 80, 391, 51));
+        lineEdit->setGeometry(QRect(0, 70, 391, 51));
         lineEdit->setStyleSheet(QString::fromUtf8("border: 1px solid black;"));
         lineEdit_2 = new QLineEdit(page);
         lineEdit_2->setObjectName("lineEdit_2");
-        lineEdit_2->setGeometry(QRect(10, 190, 391, 51));
+        lineEdit_2->setGeometry(QRect(0, 180, 391, 51));
         lineEdit_2->setStyleSheet(QString::fromUtf8("border: 1px solid black;"));
         label_17 = new QLabel(page);
         label_17->setObjectName("label_17");
-        label_17->setGeometry(QRect(10, 280, 391, 71));
+        label_17->setGeometry(QRect(0, 270, 391, 71));
         QFont font1;
         font1.setPointSize(24);
         label_17->setFont(font1);
@@ -195,31 +224,87 @@ public:
         label_17->setAlignment(Qt::AlignCenter);
         checkBox_3 = new QCheckBox(page);
         checkBox_3->setObjectName("checkBox_3");
-        checkBox_3->setGeometry(QRect(420, 310, 20, 14));
+        checkBox_3->setGeometry(QRect(410, 300, 20, 14));
         checkBox_3->setChecked(false);
         tableWidget = new QTableWidget(page);
         tableWidget->setObjectName("tableWidget");
-        tableWidget->setGeometry(QRect(460, 80, 821, 671));
-        lineEdit_3 = new QLineEdit(page);
-        lineEdit_3->setObjectName("lineEdit_3");
-        lineEdit_3->setGeometry(QRect(460, 10, 391, 51));
-        lineEdit_3->setStyleSheet(QString::fromUtf8("border: 1px solid black;"));
+        tableWidget->setGeometry(QRect(480, 70, 791, 671));
         label_18 = new QLabel(page);
         label_18->setObjectName("label_18");
-        label_18->setGeometry(QRect(410, 90, 31, 31));
+        label_18->setGeometry(QRect(400, 80, 31, 31));
         label_18->setStyleSheet(QString::fromUtf8("border-radius: 15px;\n"
 "background-color: rgb(255, 0, 0);"));
         label_20 = new QLabel(page);
         label_20->setObjectName("label_20");
-        label_20->setGeometry(QRect(410, 200, 31, 31));
+        label_20->setGeometry(QRect(400, 190, 31, 31));
         label_20->setStyleSheet(QString::fromUtf8("border-radius: 15px;\n"
 "background-color: rgb(255, 0, 0);"));
+        pushButton_5 = new QPushButton(page);
+        pushButton_5->setObjectName("pushButton_5");
+        pushButton_5->setGeometry(QRect(0, 360, 431, 48));
+        QFont font2;
+        font2.setPointSize(18);
+        pushButton_5->setFont(font2);
+        pushButton_5->setStyleSheet(QString::fromUtf8("background-color: rgb(91, 102, 96);\n"
+"border-radius: 10px;"));
         stackedWidget->addWidget(page);
         page_2 = new QWidget();
         page_2->setObjectName("page_2");
-        toolButton_4 = new QToolButton(page_2);
-        toolButton_4->setObjectName("toolButton_4");
-        toolButton_4->setGeometry(QRect(20, 30, 23, 23));
+        pushButton_6 = new QPushButton(page_2);
+        pushButton_6->setObjectName("pushButton_6");
+        pushButton_6->setGeometry(QRect(0, 440, 431, 48));
+        pushButton_6->setFont(font2);
+        pushButton_6->setStyleSheet(QString::fromUtf8("background-color: rgb(91, 102, 96);\n"
+"border-radius: 10px;"));
+        lineEdit_3 = new QLineEdit(page_2);
+        lineEdit_3->setObjectName("lineEdit_3");
+        lineEdit_3->setGeometry(QRect(0, 180, 391, 51));
+        lineEdit_3->setStyleSheet(QString::fromUtf8("border: 1px solid black;"));
+        label_21 = new QLabel(page_2);
+        label_21->setObjectName("label_21");
+        label_21->setGeometry(QRect(400, 190, 31, 31));
+        label_21->setStyleSheet(QString::fromUtf8("border-radius: 15px;\n"
+"background-color: rgb(255, 0, 0);"));
+        label_19 = new QLabel(page_2);
+        label_19->setObjectName("label_19");
+        label_19->setGeometry(QRect(0, 0, 390, 60));
+        label_19->setFont(font);
+        label_19->setStyleSheet(QString::fromUtf8("\n"
+"border-radius: 30px;\n"
+"color: rgb(51,51,51);"));
+        label_19->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+        lineEdit_4 = new QLineEdit(page_2);
+        lineEdit_4->setObjectName("lineEdit_4");
+        lineEdit_4->setGeometry(QRect(0, 70, 391, 51));
+        lineEdit_4->setStyleSheet(QString::fromUtf8("border: 1px solid black;"));
+        checkBox_4 = new QCheckBox(page_2);
+        checkBox_4->setObjectName("checkBox_4");
+        checkBox_4->setGeometry(QRect(410, 380, 20, 14));
+        checkBox_4->setChecked(false);
+        label_22 = new QLabel(page_2);
+        label_22->setObjectName("label_22");
+        label_22->setGeometry(QRect(400, 80, 31, 31));
+        label_22->setStyleSheet(QString::fromUtf8("border-radius: 15px;\n"
+"background-color: rgb(255, 0, 0);"));
+        tableWidget_2 = new QTableWidget(page_2);
+        tableWidget_2->setObjectName("tableWidget_2");
+        tableWidget_2->setGeometry(QRect(480, 70, 791, 671));
+        label_23 = new QLabel(page_2);
+        label_23->setObjectName("label_23");
+        label_23->setGeometry(QRect(0, 350, 391, 71));
+        label_23->setFont(font1);
+        label_23->setStyleSheet(QString::fromUtf8("\n"
+"border-radius: 30px;\n"
+"color: rgb(213, 0, 0);"));
+        label_23->setAlignment(Qt::AlignCenter);
+        lineEdit_5 = new QLineEdit(page_2);
+        lineEdit_5->setObjectName("lineEdit_5");
+        lineEdit_5->setGeometry(QRect(0, 290, 151, 51));
+        lineEdit_5->setStyleSheet(QString::fromUtf8("border: 1px solid black;"));
+        label_25 = new QLabel(page_2);
+        label_25->setObjectName("label_25");
+        label_25->setGeometry(QRect(160, 290, 231, 51));
+        label_25->setStyleSheet(QString::fromUtf8("border: 1px solid black;"));
         stackedWidget->addWidget(page_2);
         frame_5 = new QFrame(tab);
         frame_5->setObjectName("frame_5");
@@ -292,6 +377,112 @@ public:
         tabWidget->addTab(tab_2, QString());
         tab_3 = new QWidget();
         tab_3->setObjectName("tab_3");
+        frame_6 = new QFrame(tab_3);
+        frame_6->setObjectName("frame_6");
+        frame_6->setGeometry(QRect(0, 0, 1291, 81));
+        frame_6->setFrameShape(QFrame::StyledPanel);
+        frame_6->setFrameShadow(QFrame::Raised);
+        horizontalLayoutWidget_4 = new QWidget(frame_6);
+        horizontalLayoutWidget_4->setObjectName("horizontalLayoutWidget_4");
+        horizontalLayoutWidget_4->setGeometry(QRect(10, 10, 1271, 61));
+        horizontalLayout_4 = new QHBoxLayout(horizontalLayoutWidget_4);
+        horizontalLayout_4->setObjectName("horizontalLayout_4");
+        horizontalLayout_4->setContentsMargins(0, 0, 0, 0);
+        pushButton_7 = new QPushButton(horizontalLayoutWidget_4);
+        pushButton_7->setObjectName("pushButton_7");
+        pushButton_7->setStyleSheet(QString::fromUtf8("background-color: rgb(91, 102, 96);\n"
+"border-radius: 10px;"));
+
+        horizontalLayout_4->addWidget(pushButton_7);
+
+        label_52 = new QLabel(horizontalLayoutWidget_4);
+        label_52->setObjectName("label_52");
+
+        horizontalLayout_4->addWidget(label_52);
+
+        label_43 = new QLabel(horizontalLayoutWidget_4);
+        label_43->setObjectName("label_43");
+
+        horizontalLayout_4->addWidget(label_43);
+
+        label_44 = new QLabel(horizontalLayoutWidget_4);
+        label_44->setObjectName("label_44");
+
+        horizontalLayout_4->addWidget(label_44);
+
+        label_45 = new QLabel(horizontalLayoutWidget_4);
+        label_45->setObjectName("label_45");
+
+        horizontalLayout_4->addWidget(label_45);
+
+        label_46 = new QLabel(horizontalLayoutWidget_4);
+        label_46->setObjectName("label_46");
+
+        horizontalLayout_4->addWidget(label_46);
+
+        label_47 = new QLabel(horizontalLayoutWidget_4);
+        label_47->setObjectName("label_47");
+
+        horizontalLayout_4->addWidget(label_47);
+
+        label_48 = new QLabel(horizontalLayoutWidget_4);
+        label_48->setObjectName("label_48");
+
+        horizontalLayout_4->addWidget(label_48);
+
+        label_49 = new QLabel(horizontalLayoutWidget_4);
+        label_49->setObjectName("label_49");
+
+        horizontalLayout_4->addWidget(label_49);
+
+        label_50 = new QLabel(horizontalLayoutWidget_4);
+        label_50->setObjectName("label_50");
+
+        horizontalLayout_4->addWidget(label_50);
+
+        stackedWidget_2 = new QStackedWidget(tab_3);
+        stackedWidget_2->setObjectName("stackedWidget_2");
+        stackedWidget_2->setGeometry(QRect(0, 90, 1291, 761));
+        page_3 = new QWidget();
+        page_3->setObjectName("page_3");
+        label_26 = new QLabel(page_3);
+        label_26->setObjectName("label_26");
+        label_26->setGeometry(QRect(0, 0, 390, 60));
+        label_26->setFont(font);
+        label_26->setStyleSheet(QString::fromUtf8("\n"
+"border-radius: 30px;\n"
+"color: rgb(51,51,51);"));
+        label_26->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+        lineEdit_6 = new QLineEdit(page_3);
+        lineEdit_6->setObjectName("lineEdit_6");
+        lineEdit_6->setGeometry(QRect(0, 70, 391, 51));
+        lineEdit_6->setStyleSheet(QString::fromUtf8("border: 1px solid black;"));
+        lineEdit_7 = new QLineEdit(page_3);
+        lineEdit_7->setObjectName("lineEdit_7");
+        lineEdit_7->setGeometry(QRect(0, 190, 391, 51));
+        lineEdit_7->setStyleSheet(QString::fromUtf8("border: 1px solid black;"));
+        tableWidget_3 = new QTableWidget(page_3);
+        tableWidget_3->setObjectName("tableWidget_3");
+        tableWidget_3->setGeometry(QRect(480, 70, 791, 671));
+        label_29 = new QLabel(page_3);
+        label_29->setObjectName("label_29");
+        label_29->setGeometry(QRect(400, 200, 31, 31));
+        label_29->setStyleSheet(QString::fromUtf8("border-radius: 15px;\n"
+"background-color: rgb(255, 0, 0);"));
+        pushButton_9 = new QPushButton(page_3);
+        pushButton_9->setObjectName("pushButton_9");
+        pushButton_9->setGeometry(QRect(0, 430, 431, 48));
+        pushButton_9->setFont(font2);
+        pushButton_9->setStyleSheet(QString::fromUtf8("background-color: rgb(91, 102, 96);\n"
+"border-radius: 10px;"));
+        lineEdit_8 = new QLineEdit(page_3);
+        lineEdit_8->setObjectName("lineEdit_8");
+        lineEdit_8->setGeometry(QRect(0, 310, 391, 51));
+        lineEdit_8->setStyleSheet(QString::fromUtf8("border: 1px solid black;"));
+        stackedWidget_2->addWidget(page_3);
+        page_4 = new QWidget();
+        page_4->setObjectName("page_4");
+        stackedWidget_2->addWidget(page_4);
         tabWidget->addTab(tab_3, QString());
         toolButton = new QToolButton(bibli);
         toolButton->setObjectName("toolButton");
@@ -348,6 +539,7 @@ public:
 
         tabWidget->setCurrentIndex(0);
         stackedWidget->setCurrentIndex(0);
+        stackedWidget_2->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(bibli);
@@ -367,16 +559,24 @@ public:
         label_3->setText(QString());
         label_15->setText(QString());
         label_11->setText(QString());
-        pushButton->setText(QCoreApplication::translate("bibli", "\320\237\321\200\320\270\320\275\321\217\321\202\321\214", nullptr));
         label_16->setText(QCoreApplication::translate("bibli", "\320\237\321\200\320\270\320\265\320\274 \320\272\320\275\320\270\320\263", nullptr));
         lineEdit->setPlaceholderText(QCoreApplication::translate("bibli", "\320\233\320\276\320\263\320\270\320\275 \320\277\320\276\320\273\321\214\320\267\320\276\320\262\320\260\321\202\320\265\320\273\321\217", nullptr));
         lineEdit_2->setPlaceholderText(QCoreApplication::translate("bibli", "ID \320\272\320\275\320\270\320\263\320\270", nullptr));
         label_17->setText(QCoreApplication::translate("bibli", "\320\236\321\202\320\274\320\265\321\202\321\214\321\202\320\265 \321\203\320\277\320\273\320\260\321\202\321\203 \321\210\321\202\321\200\320\260\321\204\320\260", nullptr));
         checkBox_3->setText(QString());
-        lineEdit_3->setPlaceholderText(QCoreApplication::translate("bibli", "\320\237\320\276\320\270\321\201\320\272 \320\272\320\275\320\270\320\263\320\270", nullptr));
         label_18->setText(QString());
         label_20->setText(QString());
-        toolButton_4->setText(QCoreApplication::translate("bibli", "...", nullptr));
+        pushButton_5->setText(QCoreApplication::translate("bibli", "\320\237\321\200\320\270\320\275\321\217\321\202\321\214", nullptr));
+        pushButton_6->setText(QCoreApplication::translate("bibli", "\320\237\321\200\320\270\320\275\321\217\321\202\321\214", nullptr));
+        lineEdit_3->setPlaceholderText(QCoreApplication::translate("bibli", "ID \320\272\320\275\320\270\320\263\320\270", nullptr));
+        label_21->setText(QString());
+        label_19->setText(QCoreApplication::translate("bibli", "\320\222\321\213\320\264\320\260\321\207\320\260 \320\272\320\275\320\270\320\263", nullptr));
+        lineEdit_4->setPlaceholderText(QCoreApplication::translate("bibli", "\320\233\320\276\320\263\320\270\320\275 \320\277\320\276\320\273\321\214\320\267\320\276\320\262\320\260\321\202\320\265\320\273\321\217", nullptr));
+        checkBox_4->setText(QString());
+        label_22->setText(QString());
+        label_23->setText(QCoreApplication::translate("bibli", "\320\236\321\202\320\274\320\265\321\202\321\214\321\202\320\265 \320\276\320\277\320\273\320\260\321\202\321\203 \320\260\321\200\320\265\320\275\320\264\321\213", nullptr));
+        lineEdit_5->setPlaceholderText(QCoreApplication::translate("bibli", "\320\232\320\276\320\273\320\270\321\207\320\265\321\201\321\202\320\262\320\276 \320\264\320\275\320\265\320\271 \320\260\321\200\320\265\320\275\320\264\321\213", nullptr));
+        label_25->setText(QString());
         pushButton_3->setText(QCoreApplication::translate("bibli", "\n"
 "\320\237\321\200\320\270\320\265\320\274\n"
 "", nullptr));
@@ -393,6 +593,27 @@ public:
         label_42->setText(QString());
         tabWidget->setTabText(tabWidget->indexOf(tab), QCoreApplication::translate("bibli", "\320\237\321\200\320\270\321\221\320\274\\\320\262\321\213\320\264\320\260\321\207\320\260", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab_2), QCoreApplication::translate("bibli", "\320\236\320\277\320\265\321\200\320\260\321\206\320\270\320\270 \321\201 \320\272\320\275\320\270\320\263\320\260\320\274\320\270", nullptr));
+        pushButton_7->setText(QCoreApplication::translate("bibli", "\n"
+"\320\240\320\265\320\263\320\270\321\201\321\202\321\200\320\260\321\206\320\270\321\217\n"
+"", nullptr));
+        label_52->setText(QString());
+        label_43->setText(QString());
+        label_44->setText(QString());
+        label_45->setText(QString());
+        label_46->setText(QString());
+        label_47->setText(QString());
+        label_48->setText(QString());
+        label_49->setText(QString());
+        label_50->setText(QString());
+        label_26->setText(QCoreApplication::translate("bibli", "\320\240\320\265\320\263\320\270\321\201\321\202\321\200\320\260\321\206\320\270\321\217", nullptr));
+        lineEdit_6->setText(QString());
+        lineEdit_6->setPlaceholderText(QCoreApplication::translate("bibli", "\320\244\320\230\320\236", nullptr));
+        lineEdit_7->setText(QString());
+        lineEdit_7->setPlaceholderText(QCoreApplication::translate("bibli", "\320\233\320\276\320\263\320\270\320\275", nullptr));
+        label_29->setText(QString());
+        pushButton_9->setText(QCoreApplication::translate("bibli", "\320\237\321\200\320\270\320\275\321\217\321\202\321\214", nullptr));
+        lineEdit_8->setText(QString());
+        lineEdit_8->setPlaceholderText(QCoreApplication::translate("bibli", "\320\237\320\260\321\200\320\276\320\273\321\214", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab_3), QCoreApplication::translate("bibli", "\320\240\320\260\320\261\320\276\321\202\320\260 \321\201 \320\277\320\276\320\273\321\214\320\267\320\276\320\262\320\260\321\202\320\265\320\273\321\217\320\274\320\270", nullptr));
         toolButton->setText(QString());
         label_8->setText(QString());

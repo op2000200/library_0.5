@@ -50,6 +50,7 @@ book::book(QWidget *parent) :
 
     delete[] a;
     file6.seek(0);
+    file6.close();
     file7.flush();
 }
 

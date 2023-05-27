@@ -73,6 +73,7 @@ void HelloScreen::StartingSequence()
 
     delete[] a;
     file2.seek(0);
+    file2.close();
     file3.flush();
 
 }
@@ -89,14 +90,14 @@ void HelloScreen::on_toolButton_clicked()
 
 int loginCheck (QString login, QString password)
 {
-    file2.open(QIODevice::ReadOnly);
-    QString q = file2.readLine();
+    file3.open(QIODevice::ReadOnly);
+    QString q = file3.readLine();
     int c = q.toInt();
     QStringList *a = new QStringList[c];
     QString b;
     for (int j = 0; j < c; j++)
     {
-        b = file2.readLine();
+        b = file3.readLine();
         a[j] = b.split(" ");
     }
     for (int i = 0; i < c; i++)
@@ -105,10 +106,12 @@ int loginCheck (QString login, QString password)
         {
             if (login == a[j][1] and password == a[j][2])
             {
+                //file2.close();
                 return a[j][3].toInt();
             }
         }
     }
+    //file2.close();
     return 0;
 }
 
@@ -138,14 +141,14 @@ void HelloScreen::on_pushButton_clicked()
     connect(bbl, &bibli::exiting, this, &HelloScreen::BTHS);
     int a1;
     QString login = ui->lineEdit->text(), password = ui->lineEdit_2->text();
-    file2.open(QIODevice::ReadOnly);
-    QString q = file2.readLine();
+    file3.open(QIODevice::ReadOnly);
+    QString q = file3.readLine();
     int c = q.toInt();
     QStringList *a = new QStringList[c];
     QString b;
     for (int j = 0; j < c; j++)
     {
-        b = file2.readLine();
+        b = file3.readLine();
         a[j] = b.split(" ");
     }
     for (int i = 0; i < c; i++)
@@ -186,7 +189,7 @@ void HelloScreen::on_pushButton_clicked()
         goto endgame;
     }
     endgame:
-    file2.seek(0);
+    file3.seek(0);
     delete[] a;
 }
 
@@ -211,5 +214,6 @@ void HelloScreen::BTHS()
     ui->lineEdit->clear();
     ui->lineEdit_2->clear();
     ui->label->setFocus();
+    StartingSequence();
 }
 

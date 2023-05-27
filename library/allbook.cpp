@@ -45,6 +45,7 @@ allbook::allbook(QWidget *parent) :
 
     delete[] a;
     file8.seek(0);
+    file8.close();
     file9.flush();
 }
 

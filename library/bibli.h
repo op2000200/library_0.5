@@ -14,6 +14,10 @@ class bibli : public QWidget
 public:
     explicit bibli(QWidget *parent = nullptr);
     ~bibli();
+    bool loginExist(QString login);
+    bool bookExist(QString login,QString ID);
+    bool loginUnique(QString login);
+    void refreshFile();
 
 private slots:
     void on_toolButton_2_clicked();
@@ -25,6 +29,18 @@ private slots:
     void on_pushButton_3_clicked();
 
     void on_pushButton_4_clicked();
+
+    void on_pushButton_7_clicked();
+
+    void on_checkBox_4_clicked();
+
+    void on_checkBox_3_clicked();
+
+    void on_lineEdit_returnPressed();
+
+    void on_lineEdit_2_returnPressed();
+
+    void on_pushButton_5_clicked();
 
 private:
     Ui::bibli *ui;
