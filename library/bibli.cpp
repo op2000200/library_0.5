@@ -8,9 +8,10 @@
 #include <QGraphicsView>
 #include <QFile>
 #include <QDate>
+#include <QDateTime>
 
 int userID3;
-bool pr1 = 0, pr2 = 0, vd1 = 0, vd2 = 0, rg1 = 0;
+bool pr1 = 0, pr2 = 0, pr3 = 0, vd1 = 0, vd2 = 0,vd3 = 0, rg1 = 0;
 QString Curpath6 = "C:\\Git\\Library05\\library_0.5\\library\\resourses\\DataBase\\shared\\books"+ QDate::currentDate().toString().replace(QRegularExpression("[ ]"), "_")+"_"+QTime::currentTime().toString().replace(QRegularExpression("[:]"), "_")+".txt";
 QFile file10("C:\\Git\\Library05\\library_0.5\\library\\resourses\\DataBase\\shared\\books.txt");
 
@@ -21,6 +22,8 @@ bibli::bibli(QWidget *parent) :
     ui(new Ui::bibli)
 {
     ui->setupUi(this);
+    ui->label_17->hide();
+    ui->checkBox_3->hide();
     QString aa = "border-radius: 200px; background-color: rgb(" + QString::number(rand()%255) + "," + QString::number(rand()%255) + "," + QString::number(rand()%255) + ");";
     ui->label->setStyleSheet(aa);
     ui->pushButton_5->setEnabled(0);
@@ -94,7 +97,7 @@ void bibli::on_checkBox_4_clicked()
 
 void bibli::on_checkBox_3_clicked()
 {
-    if (pr1 == 1 and pr2 == 1 and ui->checkBox_3->isChecked() == 1)
+    if (pr1 == 1 and pr2 == 1 and (ui->checkBox_3->isChecked() == 1 or pr3 == 0))
     {
         ui->pushButton_5->setEnabled(1);
     }
@@ -168,6 +171,7 @@ bool bibli::loginExist(QString login)
 
 bool bibli::bookExist(QString login,QString ID)
 {
+    QString format = "dd.MM.yyyy";
     QFile file("C:\\Git\\Library05\\library_0.5\\library\\resourses\\DataBase\\login\\login.txt");
     file.open(QIODevice::ReadOnly);
     QString q = file.readLine();
@@ -207,11 +211,48 @@ bool bibli::bookExist(QString login,QString ID)
     {
         if (a[j][0] == ID)
         {
+            QDateTime dt;
+            dt = QDateTime::fromString(a[j][1], format);
+            qDebug() << dt;
+            if (a[j][2].toInt() < dt.daysTo(QDateTime::currentDateTime()))
+            {
+                pr3 = 1;
+            }
+            else
+            {
+                pr3 = 0;
+            }
+
             return 1;
         }
     }
     file1.close();
 
+
+    return 0;
+}
+
+bool bibli::bookExist(QString ID)
+{
+    QFile file("C:\\Git\\Library05\\library_0.5\\library\\resourses\\DataBase\\shared\\book.txt");
+    file.open(QIODevice::ReadOnly);
+    QString q = file.readLine();
+    int c = q.toInt();
+    QStringList *a = new QStringList[c];
+    QString b;
+    QString id;
+    for (int j = 0; j < c; j++)
+    {
+        b = file.readLine();
+        a[j] = b.split(" ");
+    }
+    for (int j = 0; j < c; j++)
+    {
+        if (a[j][0] == ID)
+        {
+            return 1;
+        }
+    }
 
     return 0;
 }
@@ -229,7 +270,7 @@ void bibli::on_lineEdit_returnPressed()
         QString aa = "background-color: red;border-radius: 15px;";
         ui->label_18->setStyleSheet(aa);
     }
-    if (pr1 == 1 and pr2 == 1 and ui->checkBox_3->isChecked() == 1)
+    if (pr1 == 1 and pr2 == 1 and (ui->checkBox_3->isChecked() == 1 or pr3 == 0))
     {
         ui->pushButton_5->setEnabled(1);
     }
@@ -238,6 +279,17 @@ void bibli::on_lineEdit_returnPressed()
         ui->pushButton_5->setEnabled(0);
     }
     ui->label->setFocus();
+    if (pr3 == 1)
+    {
+        ui->label_17->show();
+        ui->checkBox_3->show();
+    }
+    else
+    {
+        ui->label_17->hide();
+        ui->checkBox_3->hide();
+        ui->checkBox_3->setCheckState(Qt::Unchecked);
+    }
 }
 
 
@@ -254,7 +306,7 @@ void bibli::on_lineEdit_2_returnPressed()
         QString aa = "background-color: red;border-radius: 15px;";
         ui->label_20->setStyleSheet(aa);
     }
-    if (pr1 == 1 and pr2 == 1 and ui->checkBox_3->isChecked() == 1)
+    if (pr1 == 1 and pr2 == 1 and (ui->checkBox_3->isChecked() == 1 or pr3 == 0))
     {
         ui->pushButton_5->setEnabled(1);
     }
@@ -263,6 +315,18 @@ void bibli::on_lineEdit_2_returnPressed()
         ui->pushButton_5->setEnabled(0);
     }
     ui->label->setFocus();
+    if (pr3 == 1)
+    {
+        ui->label_17->show();
+        ui->checkBox_3->show();
+    }
+    else
+    {
+        ui->label_17->hide();
+        ui->checkBox_3->hide();
+        ui->checkBox_3->setCheckState(Qt::Unchecked);
+    }
+
 }
 
 
@@ -358,5 +422,80 @@ void bibli::on_pushButton_5_clicked()
 
     file1.close();
     file2.close();
+}
+
+
+void bibli::on_lineEdit_4_returnPressed()
+{
+    vd1 = loginExist(ui->lineEdit_4->text());
+    if (vd1 == 1)
+    {
+        QString aa = "background-color: green;border-radius: 15px;";
+        ui->label_22->setStyleSheet(aa);
+    }
+    else
+    {
+        QString aa = "background-color: red;border-radius: 15px;";
+        ui->label_22->setStyleSheet(aa);
+    }
+    if (vd1 == 1 and vd2 == 1 and vd3 == 0)
+    {
+        ui->pushButton_6->setEnabled(1);
+    }
+    else
+    {
+        ui->pushButton_6->setEnabled(0);
+    }
+    ui->label->setFocus();
+}
+
+
+void bibli::on_lineEdit_3_returnPressed()
+{
+    vd2 = bookExist(ui->lineEdit_3->text());
+    if (vd2 == 1)
+    {
+        QString aa = "background-color: green;border-radius: 15px;";
+        ui->label_22->setStyleSheet(aa);
+    }
+    else
+    {
+        QString aa = "background-color: red;border-radius: 15px;";
+        ui->label_22->setStyleSheet(aa);
+    }
+    if (vd1 == 1 and vd2 == 1 and vd3 == 0)
+    {
+        ui->pushButton_6->setEnabled(1);
+    }
+    else
+    {
+        ui->pushButton_6->setEnabled(0);
+    }
+    ui->label->setFocus();
+}
+
+
+void bibli::on_lineEdit_5_returnPressed()
+{
+    QFile file("C:\\Git\\Library05\\library_0.5\\library\\resourses\\DataBase\\shared\\book.txt");
+    file.open(QIODevice::ReadOnly);
+    QString q = file.readLine();
+    int c = q.toInt();
+    QStringList *a = new QStringList[c];
+    QString b;
+    QString id;
+    for (int j = 0; j < c; j++)
+    {
+        b = file.readLine();
+        a[j] = b.split(" ");
+    }
+    for (int j = 0; j < c; j++)
+    {
+        if (a[j][1] == ui->lineEdit->text())
+        {
+            id = a[j][0];
+        }
+    }
+    file.close();
 }
 

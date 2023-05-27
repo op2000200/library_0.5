@@ -16,6 +16,7 @@ public:
     ~bibli();
     bool loginExist(QString login);
     bool bookExist(QString login,QString ID);
+    bool bookExist(QString ID);
     bool loginUnique(QString login);
     void refreshFile();
 
@@ -41,6 +42,12 @@ private slots:
     void on_lineEdit_2_returnPressed();
 
     void on_pushButton_5_clicked();
+
+    void on_lineEdit_4_returnPressed();
+
+    void on_lineEdit_3_returnPressed();
+
+    void on_lineEdit_5_returnPressed();
 
 private:
     Ui::bibli *ui;
