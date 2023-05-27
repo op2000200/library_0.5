@@ -329,7 +329,7 @@ void reader::refresh1(QFile &f)
     qq = new QTableWidgetItem();
     QString format = "dd.MM.yyyy";
     QDateTime begin, end;
-    int diff, hell; //diffihelman hahahah
+    //int diff, hell; //diffihelman hahahah
     ui->tableWidget_2->setRowCount(c);
     ui->tableWidget_2->verticalHeader()->hide();
     for (int i = 0; i < c; i++)

@@ -147,7 +147,7 @@ void DirectorMainWindow::refresh(QFile& f)
         }
     }
     delete[] a;
-    for (int i = 0; i < 7; i++)
+    for (int i = 0; i < c; i++)
         ui->tableWidget->resizeRowToContents(i);
     f.seek(0);
 }

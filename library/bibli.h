@@ -51,6 +51,14 @@ private slots:
 
     void on_pushButton_6_clicked();
 
+    void on_lineEdit_6_returnPressed();
+
+    void on_lineEdit_7_returnPressed();
+
+    void on_toolButton_4_clicked();
+
+    void on_pushButton_9_clicked();
+
 private:
     Ui::bibli *ui;
 

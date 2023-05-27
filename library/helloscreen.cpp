@@ -6,7 +6,7 @@
 #include "bibli.h"
 #include "reader.h"
 #include <QFile>
-
+#include <QDir>
 
 
 QString Curpath1 = "C:\\Git\\Library05\\library_0.5\\library\\resourses\\DataBase\\login\\login"+ QDate::currentDate().toString().replace(QRegularExpression("[ ]"), "_")+"_"+QTime::currentTime().toString().replace(QRegularExpression("[:]"), "_")+".txt";
@@ -22,6 +22,8 @@ HelloScreen::HelloScreen(QWidget *parent):
     ui(new Ui::HelloScreen)
 {
     ui->setupUi(this);
+    //QString path = "C:\\Git\\Library05\\library_0.5\\library\\resourses\\DataBase\\user\\5";
+    //QDir().mkdir(path);
     StartingSequence();
 }
 
@@ -62,19 +64,52 @@ void HelloScreen::StartingSequence()
     writeStream << c << "\n";
     for (int i = 0; i < c; i++)
     {
-        for (int j = 0; j < a[i].size(); j++)
-        {
-            buf+=a[i][j].replace(QRegularExpression("[ ]+"), "_") + " ";
-        }
+        buf = a[i].join(" ");
         buf.chop(1);
         writeStream << buf;
         buf = "";
     }
+    writeStream << "\n";
 
     delete[] a;
     file2.seek(0);
     file2.close();
     file3.flush();
+
+    /*
+    file.open(QIODevice::ReadOnly);
+    file1.open(QIODevice::ReadWrite | QIODevice::Text);
+    QString q = file.readLine();
+    int c = q.toInt();
+    QStringList *a = new QStringList[c];
+    QString b;
+    for (int j = 0; j < c; j++)
+    {
+        b = file.readLine();
+        a[j] = b.split(" ");
+    }
+    QTextStream writeStream(&file1);
+    QString buf, buff;
+    writeStream << c;
+    for (int i = 0; i < c; i++)
+    {
+
+        buf = a[i].join(" ");
+        buf.chop(1);
+        //qDebug() << buf;
+
+        //buf = "hell";
+        //qDebug() << buff;
+        //file1.write(buf.toUtf8());
+        writeStream << "\n" << buf;
+        buf = ""; buff = "";
+    }
+
+    delete[] a;
+    file.seek(0);
+    file.close();
+    file1.flush();
+    */
 
 }
 
@@ -141,19 +176,19 @@ void HelloScreen::on_pushButton_clicked()
     connect(bbl, &bibli::exiting, this, &HelloScreen::BTHS);
     int a1;
     QString login = ui->lineEdit->text(), password = ui->lineEdit_2->text();
-    file3.open(QIODevice::ReadOnly);
-    QString q = file3.readLine();
+    file2.open(QIODevice::ReadOnly);
+    QString q = file2.readLine();
     int c = q.toInt();
     QStringList *a = new QStringList[c];
     QString b;
     for (int j = 0; j < c; j++)
     {
-        b = file3.readLine();
+        b = file2.readLine();
         a[j] = b.split(" ");
     }
     for (int i = 0; i < c; i++)
     {
-        for (int j = 0; j < a[j].size(); j++)
+        for (int j = 0; j < a[j].size()+1; j++)
         {
             if (login == a[j][1] and password == a[j][2])
             {
@@ -189,7 +224,7 @@ void HelloScreen::on_pushButton_clicked()
         goto endgame;
     }
     endgame:
-    file3.seek(0);
+    file2.seek(0);
     delete[] a;
 }
 

@@ -9,6 +9,7 @@
 #include <QFile>
 #include <QDate>
 #include <QDateTime>
+#include <QDir>
 
 int userID3;
 bool pr1 = 0, pr2 = 0, pr3 = 0, vd1 = 0, vd2 = 0,vd3 = 0, rg1 = 0;
@@ -28,6 +29,89 @@ bibli::bibli(QWidget *parent) :
     ui->label->setStyleSheet(aa);
     ui->pushButton_5->setEnabled(0);
     ui->pushButton_6->setEnabled(0);
+    ui->pushButton_9->setEnabled(0);
+    QFile f(Curpath6);
+    f.open(QIODevice::ReadOnly | QIODevice::Text);
+    f.seek(0);
+    QTableWidgetItem *qq;
+    qq = new QTableWidgetItem();
+
+    QString q = f.readLine();
+    int c = q.toInt();
+
+
+    ui->tableWidget->setRowCount(c);
+    ui->tableWidget->verticalHeader()->hide();
+    ui->tableWidget->setColumnCount(7);
+    QStringList er = {"ID", "Название", "Автор", "Год выхода", "Цена в день", "Жанр", "Описание"};
+    ui->tableWidget->setHorizontalHeaderLabels(er);
+    ui->tableWidget->horizontalHeader()->resizeSection(1,10);
+    ui->tableWidget->horizontalHeader()->resizeSection(1,200);
+    ui->tableWidget->horizontalHeader()->resizeSection(2,200);
+    ui->tableWidget->horizontalHeader()->resizeSection(3,90);
+    ui->tableWidget->horizontalHeader()->resizeSection(4,90);
+    ui->tableWidget->horizontalHeader()->resizeSection(5,190);
+    ui->tableWidget->horizontalHeader()->resizeSection(6,190);
+
+    QStringList *a = new QStringList[c];
+    QString b;
+    for (int j = 0; j < c; j++)
+    {
+        b = f.readLine();
+        a[j] = b.split(" ");
+        for (int i = 0; i < a[j].size(); i++)
+        {
+            qq = new QTableWidgetItem();
+            qq->setData(Qt::DisplayRole, QVariant(a[j][i].replace(QRegularExpression("[_]"), " ")));
+            ui->tableWidget->setItem(j,i,qq);
+            //ui->textBrowser->append();
+        }
+    }
+    delete[] a;
+    for (int i = 0; i < c; i++)
+        ui->tableWidget->resizeRowToContents(i);
+    f.seek(0);
+    f.close();
+    f.open(QIODevice::ReadOnly | QIODevice::Text);
+    f.seek(0);
+    //QTableWidgetItem *qq;
+    qq = new QTableWidgetItem();
+
+    q = f.readLine();
+    c = q.toInt();
+
+
+    ui->tableWidget_2->setRowCount(c);
+    ui->tableWidget_2->verticalHeader()->hide();
+    ui->tableWidget_2->setColumnCount(7);
+    er = {"ID", "Название", "Автор", "Год выхода", "Цена в день", "Жанр", "Описание"};
+    ui->tableWidget_2->setHorizontalHeaderLabels(er);
+    ui->tableWidget_2->horizontalHeader()->resizeSection(1,10);
+    ui->tableWidget_2->horizontalHeader()->resizeSection(1,200);
+    ui->tableWidget_2->horizontalHeader()->resizeSection(2,200);
+    ui->tableWidget_2->horizontalHeader()->resizeSection(3,90);
+    ui->tableWidget_2->horizontalHeader()->resizeSection(4,90);
+    ui->tableWidget_2->horizontalHeader()->resizeSection(5,190);
+    ui->tableWidget_2->horizontalHeader()->resizeSection(6,190);
+
+    a = new QStringList[c];
+    for (int j = 0; j < c; j++)
+    {
+        b = f.readLine();
+        a[j] = b.split(" ");
+        for (int i = 0; i < a[j].size(); i++)
+        {
+            qq = new QTableWidgetItem();
+            qq->setData(Qt::DisplayRole, QVariant(a[j][i].replace(QRegularExpression("[_]"), " ")));
+            ui->tableWidget_2->setItem(j,i,qq);
+            //ui->textBrowser->append();
+        }
+    }
+    delete[] a;
+    for (int i = 0; i < c; i++)
+        ui->tableWidget_2->resizeRowToContents(i);
+    f.seek(0);
+    f.close();
 }
 
 bibli::~bibli()
@@ -67,18 +151,105 @@ void bibli::on_toolButton_3_clicked()
 void bibli::on_pushButton_3_clicked()
 {
     ui->stackedWidget->setCurrentIndex(0);
+    QFile f(Curpath6);
+    f.open(QIODevice::ReadOnly | QIODevice::Text);
+    f.seek(0);
+    QTableWidgetItem *qq;
+    qq = new QTableWidgetItem();
+
+    QString q = f.readLine();
+    int c = q.toInt();
+
+
+    ui->tableWidget->setRowCount(c);
+    ui->tableWidget->verticalHeader()->hide();
+    ui->tableWidget->setColumnCount(7);
+    QStringList er = {"ID", "Название", "Автор", "Год выхода", "Цена в день", "Жанр", "Описание"};
+    ui->tableWidget->setHorizontalHeaderLabels(er);
+    ui->tableWidget->horizontalHeader()->resizeSection(1,10);
+    ui->tableWidget->horizontalHeader()->resizeSection(1,200);
+    ui->tableWidget->horizontalHeader()->resizeSection(2,200);
+    ui->tableWidget->horizontalHeader()->resizeSection(3,90);
+    ui->tableWidget->horizontalHeader()->resizeSection(4,90);
+    ui->tableWidget->horizontalHeader()->resizeSection(5,190);
+    ui->tableWidget->horizontalHeader()->resizeSection(6,190);
+
+    QStringList *a = new QStringList[c];
+    QString b;
+    for (int j = 0; j < c; j++)
+    {
+        b = f.readLine();
+        a[j] = b.split(" ");
+        for (int i = 0; i < a[j].size(); i++)
+        {
+            qq = new QTableWidgetItem();
+            qq->setData(Qt::DisplayRole, QVariant(a[j][i].replace(QRegularExpression("[_]"), " ")));
+            ui->tableWidget->setItem(j,i,qq);
+            //ui->textBrowser->append();
+        }
+    }
+    delete[] a;
+    for (int i = 0; i < c; i++)
+        ui->tableWidget->resizeRowToContents(i);
+    f.seek(0);
+    f.close();
 }
 
 
 void bibli::on_pushButton_4_clicked()
 {
+
     ui->stackedWidget->setCurrentIndex(1);
+    QFile f(Curpath6);
+    f.open(QIODevice::ReadOnly | QIODevice::Text);
+    f.seek(0);
+    QTableWidgetItem *qq;
+    qq = new QTableWidgetItem();
+
+    QString q = f.readLine();
+    int c = q.toInt();
+
+
+    ui->tableWidget_2->setRowCount(c);
+    ui->tableWidget_2->verticalHeader()->hide();
+    ui->tableWidget_2->setColumnCount(7);
+    QStringList er = {"ID", "Название", "Автор", "Год выхода", "Цена в день", "Жанр", "Описание"};
+    ui->tableWidget_2->setHorizontalHeaderLabels(er);
+    ui->tableWidget_2->horizontalHeader()->resizeSection(1,10);
+    ui->tableWidget_2->horizontalHeader()->resizeSection(1,200);
+    ui->tableWidget_2->horizontalHeader()->resizeSection(2,200);
+    ui->tableWidget_2->horizontalHeader()->resizeSection(3,90);
+    ui->tableWidget_2->horizontalHeader()->resizeSection(4,90);
+    ui->tableWidget_2->horizontalHeader()->resizeSection(5,190);
+    ui->tableWidget_2->horizontalHeader()->resizeSection(6,190);
+
+    QStringList *a = new QStringList[c];
+    QString b;
+    for (int j = 0; j < c; j++)
+    {
+        b = f.readLine();
+        a[j] = b.split(" ");
+        for (int i = 0; i < a[j].size(); i++)
+        {
+            qq = new QTableWidgetItem();
+            qq->setData(Qt::DisplayRole, QVariant(a[j][i].replace(QRegularExpression("[_]"), " ")));
+            ui->tableWidget_2->setItem(j,i,qq);
+            //ui->textBrowser->append();
+        }
+    }
+    delete[] a;
+    for (int i = 0; i < c; i++)
+        ui->tableWidget_2->resizeRowToContents(i);
+    f.seek(0);
+    f.close();
+
 }
 
 
 void bibli::on_pushButton_7_clicked()
 {
     ui->stackedWidget_2->setCurrentIndex(0);
+
 }
 
 
@@ -278,7 +449,7 @@ void bibli::on_lineEdit_returnPressed()
     {
         ui->pushButton_5->setEnabled(0);
     }
-    ui->label->setFocus();
+    ui->lineEdit_2->setFocus();
     if (pr3 == 1)
     {
         ui->label_17->show();
@@ -436,7 +607,7 @@ void bibli::on_lineEdit_4_returnPressed()
     {
         ui->pushButton_6->setEnabled(0);
     }
-    ui->label->setFocus();
+    ui->lineEdit_3->setFocus();
 }
 
 
@@ -461,7 +632,7 @@ void bibli::on_lineEdit_3_returnPressed()
     {
         ui->pushButton_6->setEnabled(0);
     }
-    ui->label->setFocus();
+    ui->lineEdit_5->setFocus();
 }
 
 
@@ -587,6 +758,182 @@ void bibli::on_pushButton_6_clicked()
     file1.write("\n" + newbook.toUtf8()+"\n");
 
     file1.close();
+
+}
+
+
+void bibli::on_lineEdit_6_returnPressed()
+{
+    if (ui->lineEdit_6->text() != "")
+    {
+        QString aa = "background-color: green;border-radius: 15px;";
+        ui->label_29->setStyleSheet(aa);
+    }
+    else
+    {
+        QString aa = "background-color: red;border-radius: 15px;";
+        ui->label_29->setStyleSheet(aa);
+    }
+    ui->lineEdit_7->setFocus();
+    if (rg1 == 1 and ui->lineEdit_6->text() != "" and ui->label_24->text() != "")
+    {
+        ui->pushButton_9->setEnabled(1);
+    }
+    else
+    {
+        ui->pushButton_9->setEnabled(0);
+    }
+}
+
+
+void bibli::on_lineEdit_7_returnPressed()
+{
+    rg1 = loginUnique(ui->lineEdit_7->text());
+    if (rg1 == 1)
+    {
+        QString aa = "background-color: green;border-radius: 15px;";
+        ui->label_30->setStyleSheet(aa);
+    }
+    else
+    {
+        QString aa = "background-color: red;border-radius: 15px;";
+        ui->label_30->setStyleSheet(aa);
+    }
+    ui->label->setFocus();
+    if (rg1 == 1 and ui->lineEdit_6->text() != "" and ui->label_24->text() != "")
+    {
+        ui->pushButton_9->setEnabled(1);
+    }
+    else
+    {
+        ui->pushButton_9->setEnabled(0);
+    }
+}
+
+
+void bibli::on_toolButton_4_clicked()
+{
+    srand(time(0));
+    QString a;
+    for (int i = 0; i < 12; i++)
+    {
+        a += QString::number(rand() % 9);
+    }
+    ui->label_24->setText(a);
+    if (rg1 == 1 and ui->lineEdit_6->text() != "" and ui->label_24->text() != "")
+    {
+        ui->pushButton_9->setEnabled(1);
+    }
+    else
+    {
+        ui->pushButton_9->setEnabled(0);
+    }
+}
+
+bool bibli::loginUnique(QString login)
+{
+    QFile file("C:\\Git\\Library05\\library_0.5\\library\\resourses\\DataBase\\login\\login.txt");
+    file.open(QIODevice::ReadOnly);
+    QString q = file.readLine();
+    int c = q.toInt();
+    QStringList *a = new QStringList[c];
+    QString b;
+    for (int j = 0; j < c; j++)
+    {
+        b = file.readLine();
+        a[j] = b.split(" ");
+    }
+    for (int j = 0; j < c; j++)
+    {
+        if (a[j][1] == login)
+        {
+            return 0;
+        }
+    }
+    file.close();
+    return 1;
+}
+
+
+void bibli::on_pushButton_9_clicked()
+{
+    QString newuser, id;
+
+    QFile file("C:\\Git\\Library05\\library_0.5\\library\\resourses\\DataBase\\login\\login.txt");
+    file.open(QIODevice::ReadOnly);
+    QString q = file.readLine();
+    int c = q.toInt();
+    QStringList *a = new QStringList[c];
+    QString b;
+    for (int j = 0; j < c; j++)
+    {
+        b = file.readLine();
+        a[j] = b.split(" ");
+    }
+    file.close();
+
+    newuser = QString::number(c+1) + " " + ui->lineEdit_7->text() + " " + ui->label_24->text() + " 2";
+
+    file.open(QIODevice::WriteOnly);
+
+    file.write(QString::number(c+1).toUtf8());
+    for (int j = 0; j < c; j++)
+    {
+        b= "\n"+a[j].join(" ").toUtf8();
+        b.chop(1);
+        file.write(b.toUtf8());
+    }
+
+    file.write("\n" + newuser.toUtf8()+"\n");
+
+    file.close();
+    newuser = QString::number(c+1) + " " + ui->lineEdit_7->text();
+    id = QString::number(c+1);
+    file.setFileName("C:\\Git\\Library05\\library_0.5\\library\\resourses\\DataBase\\user\\1\\userList.txt");
+    file.open(QIODevice::ReadOnly);
+
+    q = file.readLine();
+    c = q.toInt();
+    a = new QStringList[c];
+    for (int j = 0; j < c; j++)
+    {
+        b = file.readLine();
+        a[j] = b.split(" ");
+    }
+    file.close();
+
+    file.open(QIODevice::WriteOnly);
+
+    file.write(QString::number(c+1).toUtf8());
+    for (int j = 0; j < c; j++)
+    {
+        b= "\n"+a[j].join(" ").toUtf8();
+        b.chop(1);
+        file.write(b.toUtf8());
+    }
+
+    file.write("\n" + newuser.toUtf8()+"\n");
+    file.close();
+
+    QString path;
+    path = "C:\\Git\\Library05\\library_0.5\\library\\resourses\\DataBase\\user\\" + id;
+    QDir().mkdir(path);
+
+    path = "C:\\Git\\Library05\\library_0.5\\library\\resourses\\DataBase\\user\\" + id + "\\info.txt";
+    file.setFileName(path);
+    file.open(QIODevice::WriteOnly);
+    file.write(ui->lineEdit_6->text().toUtf8()+"\n");
+    file.close();
+    path = "C:\\Git\\Library05\\library_0.5\\library\\resourses\\DataBase\\user\\" + id + "\\bookfornow.txt";
+    file.setFileName(path);
+    file.open(QIODevice::WriteOnly);
+    file.write("0\n");
+    file.close();
+    path = "C:\\Git\\Library05\\library_0.5\\library\\resourses\\DataBase\\user\\" + id + "\\history.txt";
+    file.setFileName(path);
+    file.open(QIODevice::WriteOnly);
+    file.write("0\n");
+    file.close();
 
 }
 
