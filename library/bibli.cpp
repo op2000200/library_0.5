@@ -30,6 +30,7 @@ bibli::bibli(QWidget *parent) :
     ui->pushButton_5->setEnabled(0);
     ui->pushButton_6->setEnabled(0);
     ui->pushButton_9->setEnabled(0);
+    ui->pushButton_10->setEnabled(0);
     QFile f(Curpath6);
     f.open(QIODevice::ReadOnly | QIODevice::Text);
     f.seek(0);
@@ -934,6 +935,109 @@ void bibli::on_pushButton_9_clicked()
     file.open(QIODevice::WriteOnly);
     file.write("0\n");
     file.close();
+}
+
+
+void bibli::on_lineEdit_9_returnPressed()
+{
+    ui->lineEdit_10->setFocus();
+    if (ui->lineEdit_9->text() != "" and ui->lineEdit_10->text() != "" and ui->lineEdit_11->text() != "" and ui->lineEdit_12->text() != "" and ui->lineEdit_13->text() != "" and ui->plainTextEdit->toPlainText() != "")
+    {
+        ui->pushButton_10->setEnabled(1);
+    }
+    else
+    {
+        ui->pushButton_10->setEnabled(0);
+    }
+}
+
+
+void bibli::on_lineEdit_10_returnPressed()
+{
+    ui->lineEdit_11->setFocus();
+    if (ui->lineEdit_9->text() != "" and ui->lineEdit_10->text() != "" and ui->lineEdit_11->text() != "" and ui->lineEdit_12->text() != "" and ui->lineEdit_13->text() != "" and ui->plainTextEdit->toPlainText() != "")
+    {
+        ui->pushButton_10->setEnabled(1);
+    }
+    else
+    {
+        ui->pushButton_10->setEnabled(0);
+    }
+}
+
+
+void bibli::on_lineEdit_11_returnPressed()
+{
+    ui->lineEdit_12->setFocus();
+    if (ui->lineEdit_9->text() != "" and ui->lineEdit_10->text() != "" and ui->lineEdit_11->text() != "" and ui->lineEdit_12->text() != "" and ui->lineEdit_13->text() != "" and ui->plainTextEdit->toPlainText() != "")
+    {
+        ui->pushButton_10->setEnabled(1);
+    }
+    else
+    {
+        ui->pushButton_10->setEnabled(0);
+    }
+}
+
+
+void bibli::on_lineEdit_12_returnPressed()
+{
+    ui->lineEdit_13->setFocus();
+    if (ui->lineEdit_9->text() != "" and ui->lineEdit_10->text() != "" and ui->lineEdit_11->text() != "" and ui->lineEdit_12->text() != "" and ui->lineEdit_13->text() != "" and ui->plainTextEdit->toPlainText() != "")
+    {
+        ui->pushButton_10->setEnabled(1);
+    }
+    else
+    {
+        ui->pushButton_10->setEnabled(0);
+    }
+}
+
+
+void bibli::on_lineEdit_13_returnPressed()
+{
+    ui->plainTextEdit->setFocus();
+    if (ui->lineEdit_9->text() != "" and ui->lineEdit_10->text() != "" and ui->lineEdit_11->text() != "" and ui->lineEdit_12->text() != "" and ui->lineEdit_13->text() != "" and ui->plainTextEdit->toPlainText() != "")
+    {
+        ui->pushButton_10->setEnabled(1);
+    }
+    else
+    {
+        ui->pushButton_10->setEnabled(0);
+    }
+}
+
+void bibli::on_pushButton_10_clicked()
+{
+    QFile file2("C:\\Git\\Library05\\library_0.5\\library\\resourses\\DataBase\\shared\\books.txt");
+    file2.open(QIODevice::ReadOnly | QIODevice::Text);
+    QString q = file2.readLine();
+    int c = q.toInt();
+    QStringList *a = new QStringList[c];
+    QString b;
+    for (int j = 0; j < c; j++)
+    {
+        b = file2.readLine();
+        a[j] = b.split(" ");
+    }
+    file2.close();
+
+    QString newbook;
+    newbook = QString::number(c+1) + " " + ui->lineEdit_9->text() + " " + ui->lineEdit_10->text() + " " + ui->lineEdit_11->text() + " " + ui->lineEdit_12->text() + " " + ui->lineEdit_13->text() + " " + ui->plainTextEdit->toPlainText();
+
+    file2.setFileName("C:\\Git\\Library05\\library_0.5\\library\\resourses\\DataBase\\shared\\books.txt");
+    file2.open(QIODevice::WriteOnly | QIODevice::Text);
+
+    file2.write(QString::number(c+1).toUtf8());
+    for (int j = 0; j < c; j++)
+    {
+        b= "\n"+a[j].join(" ").toUtf8();
+        b.chop(1);
+        file2.write(b.toUtf8());
+    }
+
+    file2.write("\n" + newbook.toUtf8()+"\n");
+    file2.close();
 
 }
 

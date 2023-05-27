@@ -17,6 +17,7 @@
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
+#include <QtWidgets/QPlainTextEdit>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStackedWidget>
 #include <QtWidgets/QTabWidget>
@@ -79,6 +80,30 @@ public:
     QLabel *label_41;
     QLabel *label_42;
     QWidget *tab_2;
+    QStackedWidget *stackedWidget_3;
+    QWidget *page_5;
+    QLabel *label_27;
+    QLineEdit *lineEdit_9;
+    QPushButton *pushButton_10;
+    QLineEdit *lineEdit_10;
+    QLineEdit *lineEdit_11;
+    QLineEdit *lineEdit_12;
+    QLineEdit *lineEdit_13;
+    QPlainTextEdit *plainTextEdit;
+    QWidget *page_6;
+    QFrame *frame_7;
+    QWidget *horizontalLayoutWidget_5;
+    QHBoxLayout *horizontalLayout_5;
+    QPushButton *pushButton_8;
+    QLabel *label_53;
+    QLabel *label_51;
+    QLabel *label_54;
+    QLabel *label_55;
+    QLabel *label_56;
+    QLabel *label_57;
+    QLabel *label_58;
+    QLabel *label_59;
+    QLabel *label_60;
     QWidget *tab_3;
     QFrame *frame_6;
     QWidget *horizontalLayoutWidget_4;
@@ -376,6 +401,115 @@ public:
         tabWidget->addTab(tab, QString());
         tab_2 = new QWidget();
         tab_2->setObjectName("tab_2");
+        stackedWidget_3 = new QStackedWidget(tab_2);
+        stackedWidget_3->setObjectName("stackedWidget_3");
+        stackedWidget_3->setGeometry(QRect(0, 90, 1291, 761));
+        page_5 = new QWidget();
+        page_5->setObjectName("page_5");
+        label_27 = new QLabel(page_5);
+        label_27->setObjectName("label_27");
+        label_27->setGeometry(QRect(0, 0, 571, 61));
+        label_27->setFont(font);
+        label_27->setStyleSheet(QString::fromUtf8("\n"
+"border-radius: 30px;\n"
+"color: rgb(51,51,51);"));
+        label_27->setAlignment(Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft);
+        lineEdit_9 = new QLineEdit(page_5);
+        lineEdit_9->setObjectName("lineEdit_9");
+        lineEdit_9->setGeometry(QRect(10, 80, 391, 51));
+        lineEdit_9->setStyleSheet(QString::fromUtf8("border: 1px solid black;"));
+        pushButton_10 = new QPushButton(page_5);
+        pushButton_10->setObjectName("pushButton_10");
+        pushButton_10->setGeometry(QRect(10, 380, 391, 48));
+        pushButton_10->setFont(font2);
+        pushButton_10->setStyleSheet(QString::fromUtf8("background-color: rgb(91, 102, 96);\n"
+"border-radius: 10px;"));
+        lineEdit_10 = new QLineEdit(page_5);
+        lineEdit_10->setObjectName("lineEdit_10");
+        lineEdit_10->setGeometry(QRect(10, 140, 391, 51));
+        lineEdit_10->setStyleSheet(QString::fromUtf8("border: 1px solid black;"));
+        lineEdit_11 = new QLineEdit(page_5);
+        lineEdit_11->setObjectName("lineEdit_11");
+        lineEdit_11->setGeometry(QRect(10, 200, 391, 51));
+        lineEdit_11->setStyleSheet(QString::fromUtf8("border: 1px solid black;"));
+        lineEdit_12 = new QLineEdit(page_5);
+        lineEdit_12->setObjectName("lineEdit_12");
+        lineEdit_12->setGeometry(QRect(10, 260, 391, 51));
+        lineEdit_12->setStyleSheet(QString::fromUtf8("border: 1px solid black;"));
+        lineEdit_13 = new QLineEdit(page_5);
+        lineEdit_13->setObjectName("lineEdit_13");
+        lineEdit_13->setGeometry(QRect(10, 320, 391, 51));
+        lineEdit_13->setStyleSheet(QString::fromUtf8("border: 1px solid black;"));
+        plainTextEdit = new QPlainTextEdit(page_5);
+        plainTextEdit->setObjectName("plainTextEdit");
+        plainTextEdit->setGeometry(QRect(420, 80, 861, 611));
+        stackedWidget_3->addWidget(page_5);
+        page_6 = new QWidget();
+        page_6->setObjectName("page_6");
+        stackedWidget_3->addWidget(page_6);
+        frame_7 = new QFrame(tab_2);
+        frame_7->setObjectName("frame_7");
+        frame_7->setGeometry(QRect(0, 0, 1291, 81));
+        frame_7->setFrameShape(QFrame::StyledPanel);
+        frame_7->setFrameShadow(QFrame::Raised);
+        horizontalLayoutWidget_5 = new QWidget(frame_7);
+        horizontalLayoutWidget_5->setObjectName("horizontalLayoutWidget_5");
+        horizontalLayoutWidget_5->setGeometry(QRect(10, 10, 1271, 61));
+        horizontalLayout_5 = new QHBoxLayout(horizontalLayoutWidget_5);
+        horizontalLayout_5->setObjectName("horizontalLayout_5");
+        horizontalLayout_5->setContentsMargins(0, 0, 0, 0);
+        pushButton_8 = new QPushButton(horizontalLayoutWidget_5);
+        pushButton_8->setObjectName("pushButton_8");
+        pushButton_8->setStyleSheet(QString::fromUtf8("background-color: rgb(91, 102, 96);\n"
+"border-radius: 10px;"));
+
+        horizontalLayout_5->addWidget(pushButton_8);
+
+        label_53 = new QLabel(horizontalLayoutWidget_5);
+        label_53->setObjectName("label_53");
+
+        horizontalLayout_5->addWidget(label_53);
+
+        label_51 = new QLabel(horizontalLayoutWidget_5);
+        label_51->setObjectName("label_51");
+
+        horizontalLayout_5->addWidget(label_51);
+
+        label_54 = new QLabel(horizontalLayoutWidget_5);
+        label_54->setObjectName("label_54");
+
+        horizontalLayout_5->addWidget(label_54);
+
+        label_55 = new QLabel(horizontalLayoutWidget_5);
+        label_55->setObjectName("label_55");
+
+        horizontalLayout_5->addWidget(label_55);
+
+        label_56 = new QLabel(horizontalLayoutWidget_5);
+        label_56->setObjectName("label_56");
+
+        horizontalLayout_5->addWidget(label_56);
+
+        label_57 = new QLabel(horizontalLayoutWidget_5);
+        label_57->setObjectName("label_57");
+
+        horizontalLayout_5->addWidget(label_57);
+
+        label_58 = new QLabel(horizontalLayoutWidget_5);
+        label_58->setObjectName("label_58");
+
+        horizontalLayout_5->addWidget(label_58);
+
+        label_59 = new QLabel(horizontalLayoutWidget_5);
+        label_59->setObjectName("label_59");
+
+        horizontalLayout_5->addWidget(label_59);
+
+        label_60 = new QLabel(horizontalLayoutWidget_5);
+        label_60->setObjectName("label_60");
+
+        horizontalLayout_5->addWidget(label_60);
+
         tabWidget->addTab(tab_2, QString());
         tab_3 = new QWidget();
         tab_3->setObjectName("tab_3");
@@ -552,8 +686,9 @@ public:
 
         retranslateUi(bibli);
 
-        tabWidget->setCurrentIndex(2);
+        tabWidget->setCurrentIndex(1);
         stackedWidget->setCurrentIndex(0);
+        stackedWidget_3->setCurrentIndex(0);
         stackedWidget_2->setCurrentIndex(0);
 
 
@@ -608,6 +743,31 @@ public:
         label_41->setText(QString());
         label_42->setText(QString());
         tabWidget->setTabText(tabWidget->indexOf(tab), QCoreApplication::translate("bibli", "\320\237\321\200\320\270\321\221\320\274\\\320\262\321\213\320\264\320\260\321\207\320\260", nullptr));
+        label_27->setText(QCoreApplication::translate("bibli", "\320\224\320\276\320\261\320\260\320\262\320\273\320\265\320\275\320\270\320\265 \320\272\320\275\320\270\320\263\320\270 \320\262 \320\261\320\260\320\267\321\203", nullptr));
+        lineEdit_9->setText(QString());
+        lineEdit_9->setPlaceholderText(QCoreApplication::translate("bibli", "\320\235\320\260\320\267\320\262\320\260\320\275\320\270\320\265", nullptr));
+        pushButton_10->setText(QCoreApplication::translate("bibli", "\320\241\320\276\321\205\321\200\320\260\320\275\320\270\321\202\321\214", nullptr));
+        lineEdit_10->setText(QString());
+        lineEdit_10->setPlaceholderText(QCoreApplication::translate("bibli", "\320\220\320\262\321\202\320\276\321\200", nullptr));
+        lineEdit_11->setText(QString());
+        lineEdit_11->setPlaceholderText(QCoreApplication::translate("bibli", "\320\223\320\276\320\264 \320\262\321\213\320\277\321\203\321\201\320\272\320\260", nullptr));
+        lineEdit_12->setText(QString());
+        lineEdit_12->setPlaceholderText(QCoreApplication::translate("bibli", "\320\246\320\265\320\275\320\260 \320\260\321\200\320\265\320\275\320\264\321\213 \320\267\320\260 \320\264\320\265\320\275\321\214", nullptr));
+        lineEdit_13->setText(QString());
+        lineEdit_13->setPlaceholderText(QCoreApplication::translate("bibli", "\320\226\320\260\320\275\321\200", nullptr));
+        plainTextEdit->setPlaceholderText(QCoreApplication::translate("bibli", "\320\236\320\277\320\270\321\201\320\260\320\275\320\270\320\265", nullptr));
+        pushButton_8->setText(QCoreApplication::translate("bibli", "\n"
+"\320\237\320\276\321\201\321\202\321\203\320\277\320\273\320\265\320\275\320\270\320\265 \320\272\320\275\320\270\320\263\n"
+"", nullptr));
+        label_53->setText(QString());
+        label_51->setText(QString());
+        label_54->setText(QString());
+        label_55->setText(QString());
+        label_56->setText(QString());
+        label_57->setText(QString());
+        label_58->setText(QString());
+        label_59->setText(QString());
+        label_60->setText(QString());
         tabWidget->setTabText(tabWidget->indexOf(tab_2), QCoreApplication::translate("bibli", "\320\236\320\277\320\265\321\200\320\260\321\206\320\270\320\270 \321\201 \320\272\320\275\320\270\320\263\320\260\320\274\320\270", nullptr));
         pushButton_7->setText(QCoreApplication::translate("bibli", "\n"
 "\320\240\320\265\320\263\320\270\321\201\321\202\321\200\320\260\321\206\320\270\321\217\n"

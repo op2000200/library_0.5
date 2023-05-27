@@ -189,30 +189,30 @@ void HelloScreen::on_pushButton_clicked()
     for (int i = 0; i < c; i++)
     {
         qDebug() << a[i][1] << a[i][2];
-            if (login == a[i][1] and password == a[i][2])
+        if (login == a[i][1] and password == a[i][2])
+        {
+            a1 = a[i][3].toInt();
+            ui->label_4->setVisible(0);
+            ui->label_5->setVisible(1);
+            delay(1);
+            ui->label_5->setVisible(0);
+            if (a1 == 1)
             {
-                a1 = a[i][3].toInt();
-                ui->label_4->setVisible(0);
-                ui->label_5->setVisible(1);
-                delay(1);
-                ui->label_5->setVisible(0);
-                if (a1 == 1)
-                {
-                    DMW->showFullScreen();
-                    emit send1(a[i][0].toInt());
-                }
-                if (a1 == 2)
-                {
-                    rdr->showFullScreen();
-                    emit send2(a[i][0].toInt());
-                }
-                if (a1 == 3)
-                {
-                    bbl->showFullScreen();
-                    emit send3(a[i][0].toInt());
-                }
-                this->hide();
+                DMW->showFullScreen();
+                emit send1(a[i][0].toInt());
             }
+            if (a1 == 2)
+            {
+                rdr->showFullScreen();
+                emit send2(a[i][0].toInt());
+            }
+            if (a1 == 3)
+            {
+                bbl->showFullScreen();
+                emit send3(a[i][0].toInt());
+            }
+            this->hide();
+        }
 
     }
     ui->label_4->setVisible(1);

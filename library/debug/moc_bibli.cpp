@@ -26,7 +26,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 namespace {
 struct qt_meta_stringdata_bibli_t {
-    uint offsetsAndSizes[48];
+    uint offsetsAndSizes[60];
     char stringdata0[6];
     char stringdata1[8];
     char stringdata2[1];
@@ -49,8 +49,14 @@ struct qt_meta_stringdata_bibli_t {
     char stringdata19[28];
     char stringdata20[24];
     char stringdata21[24];
-    char stringdata22[9];
-    char stringdata23[3];
+    char stringdata22[28];
+    char stringdata23[29];
+    char stringdata24[29];
+    char stringdata25[29];
+    char stringdata26[29];
+    char stringdata27[25];
+    char stringdata28[9];
+    char stringdata29[3];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_bibli_t::offsetsAndSizes) + ofs), len 
@@ -78,8 +84,14 @@ Q_CONSTINIT static const qt_meta_stringdata_bibli_t qt_meta_stringdata_bibli = {
         QT_MOC_LITERAL(415, 27),  // "on_lineEdit_7_returnPressed"
         QT_MOC_LITERAL(443, 23),  // "on_toolButton_4_clicked"
         QT_MOC_LITERAL(467, 23),  // "on_pushButton_9_clicked"
-        QT_MOC_LITERAL(491, 8),  // "readData"
-        QT_MOC_LITERAL(500, 2)   // "ID"
+        QT_MOC_LITERAL(491, 27),  // "on_lineEdit_9_returnPressed"
+        QT_MOC_LITERAL(519, 28),  // "on_lineEdit_10_returnPressed"
+        QT_MOC_LITERAL(548, 28),  // "on_lineEdit_11_returnPressed"
+        QT_MOC_LITERAL(577, 28),  // "on_lineEdit_12_returnPressed"
+        QT_MOC_LITERAL(606, 28),  // "on_lineEdit_13_returnPressed"
+        QT_MOC_LITERAL(635, 24),  // "on_pushButton_10_clicked"
+        QT_MOC_LITERAL(660, 8),  // "readData"
+        QT_MOC_LITERAL(669, 2)   // "ID"
     },
     "bibli",
     "exiting",
@@ -103,6 +115,12 @@ Q_CONSTINIT static const qt_meta_stringdata_bibli_t qt_meta_stringdata_bibli = {
     "on_lineEdit_7_returnPressed",
     "on_toolButton_4_clicked",
     "on_pushButton_9_clicked",
+    "on_lineEdit_9_returnPressed",
+    "on_lineEdit_10_returnPressed",
+    "on_lineEdit_11_returnPressed",
+    "on_lineEdit_12_returnPressed",
+    "on_lineEdit_13_returnPressed",
+    "on_pushButton_10_clicked",
     "readData",
     "ID"
 };
@@ -115,7 +133,7 @@ Q_CONSTINIT static const uint qt_meta_data_bibli[] = {
       10,       // revision
        0,       // classname
        0,    0, // classinfo
-      21,   14, // methods
+      27,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -123,29 +141,35 @@ Q_CONSTINIT static const uint qt_meta_data_bibli[] = {
        1,       // signalCount
 
  // signals: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,  140,    2, 0x06,    1 /* Public */,
+       1,    0,  176,    2, 0x06,    1 /* Public */,
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       3,    0,  141,    2, 0x08,    2 /* Private */,
-       4,    0,  142,    2, 0x08,    3 /* Private */,
-       5,    0,  143,    2, 0x08,    4 /* Private */,
-       6,    0,  144,    2, 0x08,    5 /* Private */,
-       7,    0,  145,    2, 0x08,    6 /* Private */,
-       8,    0,  146,    2, 0x08,    7 /* Private */,
-       9,    0,  147,    2, 0x08,    8 /* Private */,
-      10,    0,  148,    2, 0x08,    9 /* Private */,
-      11,    0,  149,    2, 0x08,   10 /* Private */,
-      12,    0,  150,    2, 0x08,   11 /* Private */,
-      13,    0,  151,    2, 0x08,   12 /* Private */,
-      14,    0,  152,    2, 0x08,   13 /* Private */,
-      15,    0,  153,    2, 0x08,   14 /* Private */,
-      16,    0,  154,    2, 0x08,   15 /* Private */,
-      17,    0,  155,    2, 0x08,   16 /* Private */,
-      18,    0,  156,    2, 0x08,   17 /* Private */,
-      19,    0,  157,    2, 0x08,   18 /* Private */,
-      20,    0,  158,    2, 0x08,   19 /* Private */,
-      21,    0,  159,    2, 0x08,   20 /* Private */,
-      22,    1,  160,    2, 0x0a,   21 /* Public */,
+       3,    0,  177,    2, 0x08,    2 /* Private */,
+       4,    0,  178,    2, 0x08,    3 /* Private */,
+       5,    0,  179,    2, 0x08,    4 /* Private */,
+       6,    0,  180,    2, 0x08,    5 /* Private */,
+       7,    0,  181,    2, 0x08,    6 /* Private */,
+       8,    0,  182,    2, 0x08,    7 /* Private */,
+       9,    0,  183,    2, 0x08,    8 /* Private */,
+      10,    0,  184,    2, 0x08,    9 /* Private */,
+      11,    0,  185,    2, 0x08,   10 /* Private */,
+      12,    0,  186,    2, 0x08,   11 /* Private */,
+      13,    0,  187,    2, 0x08,   12 /* Private */,
+      14,    0,  188,    2, 0x08,   13 /* Private */,
+      15,    0,  189,    2, 0x08,   14 /* Private */,
+      16,    0,  190,    2, 0x08,   15 /* Private */,
+      17,    0,  191,    2, 0x08,   16 /* Private */,
+      18,    0,  192,    2, 0x08,   17 /* Private */,
+      19,    0,  193,    2, 0x08,   18 /* Private */,
+      20,    0,  194,    2, 0x08,   19 /* Private */,
+      21,    0,  195,    2, 0x08,   20 /* Private */,
+      22,    0,  196,    2, 0x08,   21 /* Private */,
+      23,    0,  197,    2, 0x08,   22 /* Private */,
+      24,    0,  198,    2, 0x08,   23 /* Private */,
+      25,    0,  199,    2, 0x08,   24 /* Private */,
+      26,    0,  200,    2, 0x08,   25 /* Private */,
+      27,    0,  201,    2, 0x08,   26 /* Private */,
+      28,    1,  202,    2, 0x0a,   27 /* Public */,
 
  // signals: parameters
     QMetaType::Void,
@@ -170,7 +194,13 @@ Q_CONSTINIT static const uint qt_meta_data_bibli[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void, QMetaType::Int,   23,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void, QMetaType::Int,   29,
 
        0        // eod
 };
@@ -224,6 +254,18 @@ Q_CONSTINIT const QMetaObject bibli::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_pushButton_9_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_lineEdit_9_returnPressed'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_lineEdit_10_returnPressed'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_lineEdit_11_returnPressed'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_lineEdit_12_returnPressed'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_lineEdit_13_returnPressed'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_pushButton_10_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'readData'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<int, std::false_type>
@@ -257,7 +299,13 @@ void bibli::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void 
         case 17: _t->on_lineEdit_7_returnPressed(); break;
         case 18: _t->on_toolButton_4_clicked(); break;
         case 19: _t->on_pushButton_9_clicked(); break;
-        case 20: _t->readData((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 20: _t->on_lineEdit_9_returnPressed(); break;
+        case 21: _t->on_lineEdit_10_returnPressed(); break;
+        case 22: _t->on_lineEdit_11_returnPressed(); break;
+        case 23: _t->on_lineEdit_12_returnPressed(); break;
+        case 24: _t->on_lineEdit_13_returnPressed(); break;
+        case 25: _t->on_pushButton_10_clicked(); break;
+        case 26: _t->readData((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -291,13 +339,13 @@ int bibli::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 21)
+        if (_id < 27)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 21;
+        _id -= 27;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 21)
+        if (_id < 27)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 21;
+        _id -= 27;
     }
     return _id;
 }
