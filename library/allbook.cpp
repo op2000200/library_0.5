@@ -15,7 +15,7 @@ allbook::allbook(QWidget *parent) :
 {
     ui->setupUi(this);
     this->setWindowFlag(Qt::FramelessWindowHint);
-    file8.open(QIODevice::ReadOnly);
+    file8.open(QIODevice::ReadOnly | QIODevice::Text);
     file9.open(QIODevice::ReadWrite | QIODevice::Text);
     QString q = file8.readLine();
     int c = q.toInt();

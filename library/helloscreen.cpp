@@ -48,7 +48,7 @@ void HelloScreen::StartingSequence()
 
     ui->label_4->setVisible(0);
     ui->label_5->setVisible(0);
-    file2.open(QIODevice::ReadOnly);
+    file2.open(QIODevice::ReadOnly | QIODevice::Text);
     file3.open(QIODevice::ReadWrite | QIODevice::Text);
     QString q = file2.readLine();
     int c = q.toInt();
@@ -125,7 +125,7 @@ void HelloScreen::on_toolButton_clicked()
 
 int loginCheck (QString login, QString password)
 {
-    file3.open(QIODevice::ReadOnly);
+    file3.open(QIODevice::ReadOnly | QIODevice::Text);
     QString q = file3.readLine();
     int c = q.toInt();
     QStringList *a = new QStringList[c];
@@ -176,7 +176,7 @@ void HelloScreen::on_pushButton_clicked()
     connect(bbl, &bibli::exiting, this, &HelloScreen::BTHS);
     int a1;
     QString login = ui->lineEdit->text(), password = ui->lineEdit_2->text();
-    file2.open(QIODevice::ReadOnly);
+    file2.open(QIODevice::ReadOnly | QIODevice::Text);
     QString q = file2.readLine();
     int c = q.toInt();
     QStringList *a = new QStringList[c];

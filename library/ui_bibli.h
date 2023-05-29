@@ -54,6 +54,7 @@ public:
     QLabel *label_18;
     QLabel *label_20;
     QPushButton *pushButton_5;
+    QLabel *label_31;
     QWidget *page_2;
     QPushButton *pushButton_6;
     QLineEdit *lineEdit_3;
@@ -66,6 +67,7 @@ public:
     QLabel *label_23;
     QLineEdit *lineEdit_5;
     QLabel *label_25;
+    QLabel *label_32;
     QFrame *frame_5;
     QWidget *horizontalLayoutWidget_3;
     QHBoxLayout *horizontalLayout_3;
@@ -90,6 +92,7 @@ public:
     QLineEdit *lineEdit_12;
     QLineEdit *lineEdit_13;
     QPlainTextEdit *plainTextEdit;
+    QLabel *label_28;
     QWidget *page_6;
     QFrame *frame_7;
     QWidget *horizontalLayoutWidget_5;
@@ -129,6 +132,7 @@ public:
     QLabel *label_30;
     QToolButton *toolButton_4;
     QLabel *label_24;
+    QLabel *label_33;
     QWidget *page_4;
     QToolButton *toolButton;
     QLabel *label_8;
@@ -274,6 +278,12 @@ public:
         pushButton_5->setFont(font2);
         pushButton_5->setStyleSheet(QString::fromUtf8("background-color: rgb(91, 102, 96);\n"
 "border-radius: 10px;"));
+        label_31 = new QLabel(page);
+        label_31->setObjectName("label_31");
+        label_31->setGeometry(QRect(150, 420, 131, 61));
+        label_31->setFont(font);
+        label_31->setStyleSheet(QString::fromUtf8("color: rgb(0, 170, 0);"));
+        label_31->setAlignment(Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft);
         stackedWidget->addWidget(page);
         page_2 = new QWidget();
         page_2->setObjectName("page_2");
@@ -332,6 +342,12 @@ public:
         label_25->setObjectName("label_25");
         label_25->setGeometry(QRect(160, 290, 231, 51));
         label_25->setStyleSheet(QString::fromUtf8("border: 1px solid black;"));
+        label_32 = new QLabel(page_2);
+        label_32->setObjectName("label_32");
+        label_32->setGeometry(QRect(150, 500, 131, 61));
+        label_32->setFont(font);
+        label_32->setStyleSheet(QString::fromUtf8("color: rgb(0, 170, 0);"));
+        label_32->setAlignment(Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft);
         stackedWidget->addWidget(page_2);
         frame_5 = new QFrame(tab);
         frame_5->setObjectName("frame_5");
@@ -443,6 +459,12 @@ public:
         plainTextEdit = new QPlainTextEdit(page_5);
         plainTextEdit->setObjectName("plainTextEdit");
         plainTextEdit->setGeometry(QRect(420, 80, 861, 611));
+        label_28 = new QLabel(page_5);
+        label_28->setObjectName("label_28");
+        label_28->setGeometry(QRect(140, 460, 131, 61));
+        label_28->setFont(font);
+        label_28->setStyleSheet(QString::fromUtf8("color: rgb(0, 170, 0);"));
+        label_28->setAlignment(Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft);
         stackedWidget_3->addWidget(page_5);
         page_6 = new QWidget();
         page_6->setObjectName("page_6");
@@ -628,6 +650,12 @@ public:
         font3.setPointSize(12);
         label_24->setFont(font3);
         label_24->setStyleSheet(QString::fromUtf8("border: 1px solid black;"));
+        label_33 = new QLabel(page_3);
+        label_33->setObjectName("label_33");
+        label_33->setGeometry(QRect(150, 490, 131, 61));
+        label_33->setFont(font);
+        label_33->setStyleSheet(QString::fromUtf8("color: rgb(0, 170, 0);"));
+        label_33->setAlignment(Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft);
         stackedWidget_2->addWidget(page_3);
         page_4 = new QWidget();
         page_4->setObjectName("page_4");
@@ -653,7 +681,13 @@ public:
         label_13->setGeometry(QRect(90, 890, 49, 16));
         label_12 = new QLabel(bibli);
         label_12->setObjectName("label_12");
-        label_12->setGeometry(QRect(100, 780, 49, 16));
+        label_12->setGeometry(QRect(60, 600, 331, 71));
+        QFont font4;
+        font4.setPointSize(48);
+        label_12->setFont(font4);
+        label_12->setStyleSheet(QString::fromUtf8("background-color: rgb(217, 217, 217);\n"
+"color: rgb(51, 51, 51);"));
+        label_12->setAlignment(Qt::AlignCenter);
         toolButton_2 = new QToolButton(bibli);
         toolButton_2->setObjectName("toolButton_2");
         toolButton_2->setGeometry(QRect(1810, 10, 40, 40));
@@ -686,8 +720,8 @@ public:
 
         retranslateUi(bibli);
 
-        tabWidget->setCurrentIndex(1);
-        stackedWidget->setCurrentIndex(0);
+        tabWidget->setCurrentIndex(2);
+        stackedWidget->setCurrentIndex(1);
         stackedWidget_3->setCurrentIndex(0);
         stackedWidget_2->setCurrentIndex(0);
 
@@ -717,7 +751,8 @@ public:
         label_18->setText(QString());
         label_20->setText(QString());
         pushButton_5->setText(QCoreApplication::translate("bibli", "\320\237\321\200\320\270\320\275\321\217\321\202\321\214", nullptr));
-        pushButton_6->setText(QCoreApplication::translate("bibli", "\320\237\321\200\320\270\320\275\321\217\321\202\321\214", nullptr));
+        label_31->setText(QCoreApplication::translate("bibli", "\320\243\321\201\320\277\320\265\321\205", nullptr));
+        pushButton_6->setText(QCoreApplication::translate("bibli", "\320\222\321\213\320\264\320\260\321\202\321\214", nullptr));
         lineEdit_3->setPlaceholderText(QCoreApplication::translate("bibli", "ID \320\272\320\275\320\270\320\263\320\270", nullptr));
         label_21->setText(QString());
         label_19->setText(QCoreApplication::translate("bibli", "\320\222\321\213\320\264\320\260\321\207\320\260 \320\272\320\275\320\270\320\263", nullptr));
@@ -728,6 +763,7 @@ public:
         lineEdit_5->setInputMask(QString());
         lineEdit_5->setPlaceholderText(QCoreApplication::translate("bibli", "\320\232\320\276\320\273\320\270\321\207\320\265\321\201\321\202\320\262\320\276 \320\264\320\275\320\265\320\271 \320\260\321\200\320\265\320\275\320\264\321\213", nullptr));
         label_25->setText(QString());
+        label_32->setText(QCoreApplication::translate("bibli", "\320\243\321\201\320\277\320\265\321\205", nullptr));
         pushButton_3->setText(QCoreApplication::translate("bibli", "\n"
 "\320\237\321\200\320\270\320\265\320\274\n"
 "", nullptr));
@@ -756,6 +792,7 @@ public:
         lineEdit_13->setText(QString());
         lineEdit_13->setPlaceholderText(QCoreApplication::translate("bibli", "\320\226\320\260\320\275\321\200", nullptr));
         plainTextEdit->setPlaceholderText(QCoreApplication::translate("bibli", "\320\236\320\277\320\270\321\201\320\260\320\275\320\270\320\265", nullptr));
+        label_28->setText(QCoreApplication::translate("bibli", "\320\243\321\201\320\277\320\265\321\205", nullptr));
         pushButton_8->setText(QCoreApplication::translate("bibli", "\n"
 "\320\237\320\276\321\201\321\202\321\203\320\277\320\273\320\265\320\275\320\270\320\265 \320\272\320\275\320\270\320\263\n"
 "", nullptr));
@@ -791,6 +828,7 @@ public:
         label_30->setText(QString());
         toolButton_4->setText(QString());
         label_24->setText(QString());
+        label_33->setText(QCoreApplication::translate("bibli", "\320\243\321\201\320\277\320\265\321\205", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab_3), QCoreApplication::translate("bibli", "\320\240\320\260\320\261\320\276\321\202\320\260 \321\201 \320\277\320\276\320\273\321\214\320\267\320\276\320\262\320\260\321\202\320\265\320\273\321\217\320\274\320\270", nullptr));
         toolButton->setText(QString());
         label_8->setText(QString());

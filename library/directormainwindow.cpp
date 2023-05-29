@@ -43,7 +43,7 @@ DirectorMainWindow::DirectorMainWindow(QWidget *parent) :
     ui->tableWidget->setHidden(1);
     ui->tableWidget_2->setHidden(1);
     ui->tableWidget_3->setHidden(1);
-    file.open(QIODevice::ReadOnly);
+    file.open(QIODevice::ReadOnly | QIODevice::Text);
     file1.open(QIODevice::ReadWrite | QIODevice::Text);
     QString q = file.readLine();
     int c = q.toInt();
@@ -197,7 +197,7 @@ void DirectorMainWindow::readData(int ID)
     userID1 = ID;
     QString inf = "C:\\Git\\Library05\\library_0.5\\library\\resourses\\DataBase\\user\\" + QString::number(userID1) + "\\info.txt";
     QFile info(inf);
-    info.open(QIODevice::ReadOnly);
+    info.open(QIODevice::ReadOnly | QIODevice::Text);
     inf = info.readLine();
     ui->label_14->setText(inf);
     info.close();

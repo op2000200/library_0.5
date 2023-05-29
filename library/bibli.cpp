@@ -18,11 +18,19 @@ QFile file10("C:\\Git\\Library05\\library_0.5\\library\\resourses\\DataBase\\sha
 
 QFile file11(Curpath6);
 
+/*void delay(int n)
+{
+    QTime dieTime= QTime::currentTime().addSecs(n);
+    while (QTime::currentTime() < dieTime)
+        QCoreApplication::processEvents(QEventLoop::AllEvents, 100);
+}*/
+
 bibli::bibli(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::bibli)
 {
     ui->setupUi(this);
+    ui->label_12->setText(QDateTime::currentDateTime().toString("dd.MM.yyyy"));
     ui->label_17->hide();
     ui->checkBox_3->hide();
     QString aa = "border-radius: 200px; background-color: rgb(" + QString::number(rand()%255) + "," + QString::number(rand()%255) + "," + QString::number(rand()%255) + ");";
@@ -31,6 +39,10 @@ bibli::bibli(QWidget *parent) :
     ui->pushButton_6->setEnabled(0);
     ui->pushButton_9->setEnabled(0);
     ui->pushButton_10->setEnabled(0);
+    ui->label_28->hide();
+    ui->label_31->hide();
+    ui->label_32->hide();
+    ui->label_33->hide();
     QFile f(Curpath6);
     f.open(QIODevice::ReadOnly | QIODevice::Text);
     f.seek(0);
@@ -136,7 +148,7 @@ void bibli::readData(int ID)
     userID3 = ID;
     QString inf = "C:\\Git\\Library05\\library_0.5\\library\\resourses\\DataBase\\user\\" + QString::number(userID3) + "\\info.txt";
     QFile info(inf);
-    info.open(QIODevice::ReadOnly);
+    info.open(QIODevice::ReadOnly | QIODevice::Text);
     inf = info.readLine();
     ui->label_14->setText(inf);
     info.close();
@@ -281,7 +293,7 @@ void bibli::on_checkBox_3_clicked()
 
 void bibli::refreshFile()
 {
-    file10.open(QIODevice::ReadOnly);
+    file10.open(QIODevice::ReadOnly | QIODevice::Text);
     file11.open(QIODevice::ReadWrite | QIODevice::Text);
     QString q = file10.readLine();
     int c = q.toInt();
@@ -318,7 +330,7 @@ void bibli::refreshFile()
 bool bibli::loginExist(QString login)
 {
     QFile file("C:\\Git\\Library05\\library_0.5\\library\\resourses\\DataBase\\login\\login.txt");
-    file.open(QIODevice::ReadOnly);
+    file.open(QIODevice::ReadOnly | QIODevice::Text);
     QString q = file.readLine();
     int c = q.toInt();
     QStringList *a = new QStringList[c];
@@ -345,7 +357,7 @@ bool bibli::bookExist(QString login,QString ID)
 {
     QString format = "dd.MM.yyyy";
     QFile file("C:\\Git\\Library05\\library_0.5\\library\\resourses\\DataBase\\login\\login.txt");
-    file.open(QIODevice::ReadOnly);
+    file.open(QIODevice::ReadOnly | QIODevice::Text);
     QString q = file.readLine();
     int c = q.toInt();
     QStringList *a = new QStringList[c];
@@ -505,7 +517,7 @@ void bibli::on_lineEdit_2_returnPressed()
 void bibli::on_pushButton_5_clicked()
 {
     QFile file("C:\\Git\\Library05\\library_0.5\\library\\resourses\\DataBase\\login\\login.txt");
-    file.open(QIODevice::ReadOnly);
+    file.open(QIODevice::ReadOnly | QIODevice::Text);
     QString q = file.readLine();
     int c = q.toInt();
     QStringList *a = new QStringList[c];
@@ -584,6 +596,10 @@ void bibli::on_pushButton_5_clicked()
 
     file1.close();
     file2.close();
+
+    ui->label_31->show();
+    //delay(3);
+    ui->label_31->hide();
 }
 
 
@@ -642,7 +658,7 @@ void bibli::on_lineEdit_5_returnPressed()
     if (ui->lineEdit_5->text() != "")
     {
         QFile file("C:\\Git\\Library05\\library_0.5\\library\\resourses\\DataBase\\shared\\books.txt");
-        file.open(QIODevice::ReadOnly);
+        file.open(QIODevice::ReadOnly | QIODevice::Text);
         QString q = file.readLine();
         int c = q.toInt();
         QStringList *a = new QStringList[c];
@@ -695,7 +711,7 @@ void bibli::on_pushButton_6_clicked()
     QString userid, newbook;
 
     QFile file("C:\\Git\\Library05\\library_0.5\\library\\resourses\\DataBase\\login\\login.txt");
-    file.open(QIODevice::ReadOnly);
+    file.open(QIODevice::ReadOnly | QIODevice::Text);
     QString q = file.readLine();
     int c = q.toInt();
     QStringList *a = new QStringList[c];
@@ -759,6 +775,10 @@ void bibli::on_pushButton_6_clicked()
     file1.write("\n" + newbook.toUtf8()+"\n");
 
     file1.close();
+
+    ui->label_32->show();
+    //delay(3);
+    ui->label_32->hide();
 
 }
 
@@ -834,7 +854,7 @@ void bibli::on_toolButton_4_clicked()
 bool bibli::loginUnique(QString login)
 {
     QFile file("C:\\Git\\Library05\\library_0.5\\library\\resourses\\DataBase\\login\\login.txt");
-    file.open(QIODevice::ReadOnly);
+    file.open(QIODevice::ReadOnly | QIODevice::Text);
     QString q = file.readLine();
     int c = q.toInt();
     QStringList *a = new QStringList[c];
@@ -861,7 +881,7 @@ void bibli::on_pushButton_9_clicked()
     QString newuser, id;
 
     QFile file("C:\\Git\\Library05\\library_0.5\\library\\resourses\\DataBase\\login\\login.txt");
-    file.open(QIODevice::ReadOnly);
+    file.open(QIODevice::ReadOnly | QIODevice::Text);
     QString q = file.readLine();
     int c = q.toInt();
     QStringList *a = new QStringList[c];
@@ -875,7 +895,7 @@ void bibli::on_pushButton_9_clicked()
 
     newuser = QString::number(c+1) + " " + ui->lineEdit_7->text() + " " + ui->label_24->text() + " 2";
 
-    file.open(QIODevice::WriteOnly);
+    file.open(QIODevice::WriteOnly | QIODevice::Text);
 
     file.write(QString::number(c+1).toUtf8());
     for (int j = 0; j < c; j++)
@@ -891,7 +911,7 @@ void bibli::on_pushButton_9_clicked()
     newuser = QString::number(c+1) + " " + ui->lineEdit_7->text();
     id = QString::number(c+1);
     file.setFileName("C:\\Git\\Library05\\library_0.5\\library\\resourses\\DataBase\\user\\1\\userList.txt");
-    file.open(QIODevice::ReadOnly);
+    file.open(QIODevice::ReadOnly | QIODevice::Text);
 
     q = file.readLine();
     c = q.toInt();
@@ -903,7 +923,7 @@ void bibli::on_pushButton_9_clicked()
     }
     file.close();
 
-    file.open(QIODevice::WriteOnly);
+    file.open(QIODevice::WriteOnly | QIODevice::Text);
 
     file.write(QString::number(c+1).toUtf8());
     for (int j = 0; j < c; j++)
@@ -922,19 +942,22 @@ void bibli::on_pushButton_9_clicked()
 
     path = "C:\\Git\\Library05\\library_0.5\\library\\resourses\\DataBase\\user\\" + id + "\\info.txt";
     file.setFileName(path);
-    file.open(QIODevice::WriteOnly);
+    file.open(QIODevice::WriteOnly | QIODevice::Text);
     file.write(ui->lineEdit_6->text().toUtf8()+"\n");
     file.close();
     path = "C:\\Git\\Library05\\library_0.5\\library\\resourses\\DataBase\\user\\" + id + "\\bookfornow.txt";
     file.setFileName(path);
-    file.open(QIODevice::WriteOnly);
+    file.open(QIODevice::WriteOnly | QIODevice::Text);
     file.write("0\n");
     file.close();
     path = "C:\\Git\\Library05\\library_0.5\\library\\resourses\\DataBase\\user\\" + id + "\\history.txt";
     file.setFileName(path);
-    file.open(QIODevice::WriteOnly);
+    file.open(QIODevice::WriteOnly | QIODevice::Text);
     file.write("0\n");
     file.close();
+    ui->label_33->show();
+    //delay(3);
+    ui->label_33->hide();
 }
 
 
@@ -1038,6 +1061,10 @@ void bibli::on_pushButton_10_clicked()
 
     file2.write("\n" + newbook.toUtf8()+"\n");
     file2.close();
+
+    ui->label_28->show();
+    //delay(3);
+    ui->label_28->hide();
 
 }
 

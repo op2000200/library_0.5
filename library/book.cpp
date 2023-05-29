@@ -20,7 +20,7 @@ book::book(QWidget *parent) :
     this->setWindowFlag(Qt::FramelessWindowHint);
     ui->plainTextEdit->setReadOnly(1);
 
-    file6.open(QIODevice::ReadOnly);
+    file6.open(QIODevice::ReadOnly | QIODevice::Text);
     file7.open(QIODevice::ReadWrite | QIODevice::Text);
     QString q = file6.readLine();
     int c = q.toInt();

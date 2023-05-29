@@ -54,7 +54,7 @@ reader::reader(QWidget *parent) :
     ui->tableWidget_4->setEditTriggers(QAbstractItemView::NoEditTriggers);
     ui->tableWidget_2->setEditTriggers(QAbstractItemView::NoEditTriggers);
 
-    file5.open(QIODevice::ReadOnly);
+    file5.open(QIODevice::ReadOnly | QIODevice::Text);
     file4.open(QIODevice::ReadWrite | QIODevice::Text);
     QString q = file5.readLine();
     int c = q.toInt();
@@ -125,7 +125,7 @@ void reader::readData(int ID)
     userID2 = ID;
     QString inf = "C:\\Git\\Library05\\library_0.5\\library\\resourses\\DataBase\\user\\" + QString::number(userID2) + "\\info.txt";
     QFile info(inf);
-    info.open(QIODevice::ReadOnly);
+    info.open(QIODevice::ReadOnly | QIODevice::Text);
     inf = info.readLine();
     ui->label_14->setText(inf);
     info.close();

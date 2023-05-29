@@ -414,7 +414,13 @@ public:
         label_11->setStyleSheet(QString::fromUtf8("background-color: rgb(172, 172, 172);"));
         DATA = new QLabel(DirectorMainWindow);
         DATA->setObjectName("DATA");
-        DATA->setGeometry(QRect(100, 800, 211, 61));
+        DATA->setGeometry(QRect(70, 580, 361, 91));
+        QFont font2;
+        font2.setPointSize(48);
+        DATA->setFont(font2);
+        DATA->setStyleSheet(QString::fromUtf8("background-color: rgb(217, 217, 217);\n"
+"color: rgb(51, 51, 51);"));
+        DATA->setAlignment(Qt::AlignCenter);
         TIME = new QLabel(DirectorMainWindow);
         TIME->setObjectName("TIME");
         TIME->setGeometry(QRect(100, 890, 201, 71));

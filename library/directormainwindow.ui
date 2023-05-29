@@ -706,14 +706,26 @@ border-radius: 30px;</string>
   <widget class="QLabel" name="DATA">
    <property name="geometry">
     <rect>
-     <x>100</x>
-     <y>800</y>
-     <width>211</width>
-     <height>61</height>
+     <x>70</x>
+     <y>580</y>
+     <width>361</width>
+     <height>91</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>48</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(217, 217, 217);
+color: rgb(51, 51, 51);</string>
    </property>
    <property name="text">
     <string>дата</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
    </property>
   </widget>
   <widget class="QLabel" name="TIME">
