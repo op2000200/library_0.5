@@ -1,5 +1,0 @@
-4
-1 admin admin 0
-2 bibli bibli 1
-3 user1 1 2
-4 user2 2 2
