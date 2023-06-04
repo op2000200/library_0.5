@@ -212,9 +212,3 @@ void DirectorMainWindow::on_toolButton_3_clicked()
     this->destroy();
 
 }
-
-void DirectorMainWindow::collectRegularUsers()
-{
-    ;
-}
-
